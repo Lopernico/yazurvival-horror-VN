@@ -38,16 +38,16 @@ const characters = {
 function getSpriteVariants(characterId){
   if(!characterId) return [ '', '' ];
   
-  const basePath = window.BASE_PATH || '/';
+  const repoBase = window.REPO_BASE || './';
   
   // Si el personaje está en el registry, usa sus assets definidos
   if(characters[characterId]){
     const open = characters[characterId].open;
     const closed = characters[characterId].closed;
-    // Agregar basePath si no está incluido ya
+    // Agregar repoBase si no está incluido ya
     return [ 
-      open.startsWith('assets/') || open.startsWith('assets\\') ? basePath + open.replace(/\\/g, '/') : basePath + open,
-      closed.startsWith('assets/') || closed.startsWith('assets\\') ? basePath + closed.replace(/\\/g, '/') : basePath + closed
+      open.startsWith('assets/') || open.startsWith('assets\\') ? repoBase + open.replace(/\\/g, '/') : repoBase + open,
+      closed.startsWith('assets/') || closed.startsWith('assets\\') ? repoBase + closed.replace(/\\/g, '/') : repoBase + closed
     ];
   }
   
@@ -57,12 +57,12 @@ function getSpriteVariants(characterId){
     const parts = characterId.split('.');
     const ext = parts.pop();
     const base = parts.join('.');
-    const open = basePath + `assets/${base}.${ext}`;
-    const closed = basePath + `assets/${base}abierto.${ext}`;
+    const open = repoBase + `assets/${base}.${ext}`;
+    const closed = repoBase + `assets/${base}abierto.${ext}`;
     return [open, closed];
   }
   // sin extension: prefer png
-  return [basePath + `assets/${characterId}.png`, basePath + `assets/${characterId}abierto.png`];
+  return [repoBase + `assets/${characterId}.png`, repoBase + `assets/${characterId}abierto.png`];
 }
 
 /**
@@ -71,10 +71,10 @@ function getSpriteVariants(characterId){
  * @returns {string} Ruta del archivo de audio
  */
 function getCharacterVoice(characterId){
-  const basePath = window.BASE_PATH || '/';
+  const repoBase = window.REPO_BASE || './';
   if(characters[characterId] && characters[characterId].voice){
     const voice = characters[characterId].voice;
-    return voice.startsWith('assets/') ? basePath + voice : basePath + voice;
+    return voice.startsWith('assets/') ? repoBase + voice : repoBase + voice;
   }
-  return basePath + 'assets/talking.mp3'; // default
+  return repoBase + 'assets/talking.mp3'; // default
 }

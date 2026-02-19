@@ -42,13 +42,13 @@ function setSprite(name){
   el.sprite.onerror = () => {
     try{
       const src = el.sprite.src || '';
-      if(src.endsWith('.png')){ el.sprite.onerror = null; el.sprite.src = (window.BASE_PATH || '/') + `assets/${name}.svg`; }
+      if(src.endsWith('.png')){ el.sprite.onerror = null; el.sprite.src = (window.REPO_BASE || './') + `assets/${name}.svg`; }
       else { el.sprite.style.opacity = '0'; el.sprite.onerror = null; }
     }catch(e){ el.sprite.style.opacity = '0'; el.sprite.onerror = null; }
   };
-  const basePath = window.BASE_PATH || '/';
-  if(name.includes('.')){ el.sprite.src = basePath + `assets/${name}`; }
-  else { el.sprite.src = basePath + `assets/${name}.png`; }
+  const repoBase = window.REPO_BASE || './';
+  if(name.includes('.')){ el.sprite.src = repoBase + `assets/${name}`; }
+  else { el.sprite.src = repoBase + `assets/${name}.png`; }
 }
 
 /**
@@ -629,10 +629,13 @@ let lastScriptHash = null;
 
 function initScriptMonitoring(){
   // Do initial check to skip first reload
-  fetch(`dialogs/script.json?t=${Date.now()}`)
+  fetch((window.REPO_BASE || './') + `dialogs/script.json?t=${Date.now()}`)
     .then(r => r.text())
     .then(txt => {
-      lastScriptHash = btoa(txt); // base64 encode as simple hash
+      // Simple hash function that works with Unicode characters
+      lastScriptHash = Array.from(txt).reduce((hash, char) => {
+        return ((hash << 5) - hash) + char.charCodeAt(0);
+      }, 0);
       startScriptMonitoring();
     })
     .catch(e => console.log('Script monitoring start:', e));
@@ -640,10 +643,13 @@ function initScriptMonitoring(){
 
 function startScriptMonitoring(){
   setInterval(() => {
-    fetch(`dialogs/script.json?t=${Date.now()}`)
+    fetch((window.REPO_BASE || './') + `dialogs/script.json?t=${Date.now()}`)
       .then(r => r.text())
       .then(txt => {
-        const newHash = btoa(txt);
+        // Simple hash function that works with Unicode characters
+        const newHash = Array.from(txt).reduce((hash, char) => {
+          return ((hash << 5) - hash) + char.charCodeAt(0);
+        }, 0);
         if(lastScriptHash && newHash !== lastScriptHash){
           console.log('Script changed, reloading...');
           window.location.reload();

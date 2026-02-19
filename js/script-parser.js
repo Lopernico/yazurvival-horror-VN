@@ -53,7 +53,7 @@ async function fetchScriptFromServer(){
   // prioriza window.SCRIPT si fue inyectado por el backend
   if(window.SCRIPT && typeof window.SCRIPT === 'object'){ prepareScript(window.SCRIPT); return; }
   try{
-    const scriptPath = (window.BASE_PATH || '/') + 'dialogs/script.json';
+    const scriptPath = (window.REPO_BASE || './') + 'dialogs/script.json';
     const res = await fetch(scriptPath, {cache:'no-store'});
     if(res.ok){ const script = await res.json(); console.log('✓ Script cargado:', script.start, script.nodes.length + ' nodos'); prepareScript(script); return; }
   } catch(e){

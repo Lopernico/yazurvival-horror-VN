@@ -7,10 +7,10 @@ let musicVolume = 0.6;
 let sfxVolume = 0.9;
 // playlist configured for the app (user-provided files)
 function getBgTracks(){
-  const basePath = window.BASE_PATH || '/';
+  const repoBase = window.REPO_BASE || './';
   return [
-    basePath + 'assets/SILENT HILL - NOT TOMORROW [VOCAL].mp3',
-    basePath + 'assets/Silent Hill - Not Tomorrow (Long Version).mp3'
+    repoBase + 'assets/SILENT HILL - NOT TOMORROW [VOCAL].mp3',
+    repoBase + 'assets/Silent Hill - Not Tomorrow (Long Version).mp3'
   ];
 }
 let bgTracks = [];
@@ -110,8 +110,8 @@ function initializeDefaultAudio(){
     el.musicAudio.volume = musicVolume;
   }
   if(el.sfxAudio && !el.sfxAudio.src){ 
-    const basePath = window.BASE_PATH || '/';
-    el.sfxAudio.src = basePath + 'assets/talking.mp3'; 
+    const repoBase = window.REPO_BASE || './';
+    el.sfxAudio.src = repoBase + 'assets/talking.mp3'; 
     el.sfxAudio.volume = sfxVolume; 
   }
 }
@@ -140,14 +140,14 @@ function setMusicTrack(idx){
 function playSFX(sfxType){
   if(!el.sfxAudio) return;
   
-  const basePath = window.BASE_PATH || '/';
+  const repoBase = window.REPO_BASE || './';
   const sfxMap = {
-    'footsteps': basePath + 'assets/footsteps.mp3',
-    'rope': basePath + 'assets/rope.mp3',
-    'ambient': basePath + 'assets/ambient.mp3',
+    'footsteps': repoBase + 'assets/footsteps.mp3',
+    'rope': repoBase + 'assets/rope.mp3',
+    'ambient': repoBase + 'assets/ambient.mp3',
     'silence': null, // no sound
-    'gasp': basePath + 'assets/gasp.mp3',
-    'door': basePath + 'assets/door.mp3'
+    'gasp': repoBase + 'assets/gasp.mp3',
+    'door': repoBase + 'assets/door.mp3'
   };
   
   const sfxPath = sfxMap[sfxType] || sfxType;
@@ -159,7 +159,7 @@ function playSFX(sfxType){
   }
   
   try{
-    el.sfxAudio.src = sfxPath || basePath + 'assets/talking.mp3';
+    el.sfxAudio.src = sfxPath || repoBase + 'assets/talking.mp3';
     el.sfxAudio.volume = sfxVolume;
     el.sfxAudio.currentTime = 0;
     el.sfxAudio.play().catch(()=>{});

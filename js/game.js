@@ -122,8 +122,8 @@ function renderNode(id){
   // Sprite handling: allow node-level `sprite` override which shows a static sprite
   currentSpriteName = characterId;
   if(node.sprite){
-    const basePath = window.BASE_PATH || '/';
-    const spritePath = node.sprite.includes('/') ? basePath + node.sprite : basePath + `assets/${node.sprite}`;
+    const repoBase = window.REPO_BASE || './';
+    const spritePath = node.sprite.includes('/') ? repoBase + node.sprite : repoBase + `assets/${node.sprite}`;
     try{ el.sprite.src = spritePath; el.sprite.style.opacity = '1'; }catch(e){}
     openSpriteSrc = spritePath;
     closedSpriteSrc = spritePath;

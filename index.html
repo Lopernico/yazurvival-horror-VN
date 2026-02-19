@@ -11,18 +11,24 @@
     <script>
       // Calcula automáticamente el base path para funcionar en local y en GitHub Pages
       (function() {
-        let basePath = window.location.pathname;
-        // Si la ruta termina con .html, obtener el directorio
-        if (basePath.endsWith('.html')) {
-          basePath = basePath.substring(0, basePath.lastIndexOf('/') + 1);
+        let repoBase = window.location.pathname;
+        
+        // Si está en GitHub Pages, la ruta será algo como:
+        // /yazurvival-horror-VN/survival%20novel/ o 
+        // /yazurvival-horror-VN/survival%20novel/index.html
+        // Necesitamos extraer /yazurvival-horror-VN/
+        
+        if (repoBase.includes('survival')) {
+          // Estamos dentro de survival novel, subir al repo base
+          repoBase = repoBase.substring(0, repoBase.indexOf('survival')).replace(/\/$/, '') + '/';
+        } else {
+          // En local: usar rutas relativas (./dialogs/, ./assets/)
+          repoBase = './';
         }
-        // Asegurar que termina con /
-        if (!basePath.endsWith('/')) {
-          basePath += '/';
-        }
+        
         // Guardar en window para que otros scripts lo usen
-        window.BASE_PATH = basePath;
-        console.log('Base path detectado:', window.BASE_PATH);
+        window.REPO_BASE = repoBase;
+        console.log('Repo base detectado:', window.REPO_BASE);
       })();
     </script>
 
