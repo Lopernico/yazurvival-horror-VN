@@ -1113,8 +1113,6 @@
                   {
                       "id":  "chapter3_scene2_dialog1",
                       "type":  "dialog",
-                      "speaker":  "YAZUMIMOON",
-                      "displayName":  "Yazumimoon",   
                       "effects":  {
                                       "cameraShake":  true
                                   },
@@ -1469,7 +1467,7 @@
                       "type":  "dialog", 
                       "sprite":  "yazu cerrada.png",
 
-                      "text":  "Tazu camina de forma calmada por las escaleras del sotano, sale por la puerta, te mira",
+                      "text":  "Yazu camina de forma calmada por las escaleras del sotano, sale por la puerta, te mira",
                       "next":  "chapter3_scene2_run_dialog35"
                   },
                   {
@@ -1604,3 +1602,4 @@
                   }
               ]
 }
+
