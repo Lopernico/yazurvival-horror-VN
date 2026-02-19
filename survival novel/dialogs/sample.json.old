@@ -1,0 +1,6 @@
+{
+  "start": "start",
+  "nodes": [
+    { "id": "start", "speaker": "Narrador", "text": "[Archivo antiguo renombrado - ver script.json para la novela actual]", "next": null }
+  ]
+}
