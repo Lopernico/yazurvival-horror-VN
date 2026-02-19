@@ -42,12 +42,13 @@ function setSprite(name){
   el.sprite.onerror = () => {
     try{
       const src = el.sprite.src || '';
-      if(src.endsWith('.png')){ el.sprite.onerror = null; el.sprite.src = `assets/${name}.svg`; }
+      if(src.endsWith('.png')){ el.sprite.onerror = null; el.sprite.src = (window.BASE_PATH || '/') + `assets/${name}.svg`; }
       else { el.sprite.style.opacity = '0'; el.sprite.onerror = null; }
     }catch(e){ el.sprite.style.opacity = '0'; el.sprite.onerror = null; }
   };
-  if(name.includes('.')){ el.sprite.src = `assets/${name}`; }
-  else { el.sprite.src = `assets/${name}.png`; }
+  const basePath = window.BASE_PATH || '/';
+  if(name.includes('.')){ el.sprite.src = basePath + `assets/${name}`; }
+  else { el.sprite.src = basePath + `assets/${name}.png`; }
 }
 
 /**

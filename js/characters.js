@@ -38,9 +38,17 @@ const characters = {
 function getSpriteVariants(characterId){
   if(!characterId) return [ '', '' ];
   
+  const basePath = window.BASE_PATH || '/';
+  
   // Si el personaje está en el registry, usa sus assets definidos
   if(characters[characterId]){
-    return [ characters[characterId].open, characters[characterId].closed ];
+    const open = characters[characterId].open;
+    const closed = characters[characterId].closed;
+    // Agregar basePath si no está incluido ya
+    return [ 
+      open.startsWith('assets/') || open.startsWith('assets\\') ? basePath + open.replace(/\\/g, '/') : basePath + open,
+      closed.startsWith('assets/') || closed.startsWith('assets\\') ? basePath + closed.replace(/\\/g, '/') : basePath + closed
+    ];
   }
   
   // Si no está en registry, asume que es un nombre de archivo legacy (compatible)
@@ -49,12 +57,12 @@ function getSpriteVariants(characterId){
     const parts = characterId.split('.');
     const ext = parts.pop();
     const base = parts.join('.');
-    const open = `assets/${base}.${ext}`;
-    const closed = `assets/${base}abierto.${ext}`;
+    const open = basePath + `assets/${base}.${ext}`;
+    const closed = basePath + `assets/${base}abierto.${ext}`;
     return [open, closed];
   }
   // sin extension: prefer png
-  return [`assets/${characterId}.png`, `assets/${characterId}abierto.png`];
+  return [basePath + `assets/${characterId}.png`, basePath + `assets/${characterId}abierto.png`];
 }
 
 /**
@@ -63,8 +71,10 @@ function getSpriteVariants(characterId){
  * @returns {string} Ruta del archivo de audio
  */
 function getCharacterVoice(characterId){
+  const basePath = window.BASE_PATH || '/';
   if(characters[characterId] && characters[characterId].voice){
-    return characters[characterId].voice;
+    const voice = characters[characterId].voice;
+    return voice.startsWith('assets/') ? basePath + voice : basePath + voice;
   }
-  return 'assets/talking.mp3'; // default
+  return basePath + 'assets/talking.mp3'; // default
 }

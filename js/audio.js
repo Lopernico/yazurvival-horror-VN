@@ -6,10 +6,14 @@
 let musicVolume = 0.6;
 let sfxVolume = 0.9;
 // playlist configured for the app (user-provided files)
-const bgTracks = [
-  'assets/SILENT HILL - NOT TOMORROW [VOCAL].mp3',
-  'assets/Silent Hill - Not Tomorrow (Long Version).mp3'
-];
+function getBgTracks(){
+  const basePath = window.BASE_PATH || '/';
+  return [
+    basePath + 'assets/SILENT HILL - NOT TOMORROW [VOCAL].mp3',
+    basePath + 'assets/Silent Hill - Not Tomorrow (Long Version).mp3'
+  ];
+}
+let bgTracks = [];
 let currentMusicIndex = 0;
 
 /**
@@ -93,6 +97,10 @@ function wireAudioControls(){
  * Inicializa los audios con valores por defecto
  */
 function initializeDefaultAudio(){
+  // Inicializar bgTracks con el base path correcto
+  if(bgTracks.length === 0){
+    bgTracks = getBgTracks();
+  }
   // Setup playlist if no explicit music provided
   if(el.musicAudio && (!el.musicAudio.src || el.musicAudio.src === '')){
     const idx = (function(){ try{ const s = window.localStorage.getItem('vn_music_index'); return s!==null?Number(s):0; }catch(e){return 0;} })();
@@ -102,7 +110,8 @@ function initializeDefaultAudio(){
     el.musicAudio.volume = musicVolume;
   }
   if(el.sfxAudio && !el.sfxAudio.src){ 
-    el.sfxAudio.src = 'assets/talking.mp3'; 
+    const basePath = window.BASE_PATH || '/';
+    el.sfxAudio.src = basePath + 'assets/talking.mp3'; 
     el.sfxAudio.volume = sfxVolume; 
   }
 }
@@ -131,13 +140,14 @@ function setMusicTrack(idx){
 function playSFX(sfxType){
   if(!el.sfxAudio) return;
   
+  const basePath = window.BASE_PATH || '/';
   const sfxMap = {
-    'footsteps': 'assets/footsteps.mp3',
-    'rope': 'assets/rope.mp3',
-    'ambient': 'assets/ambient.mp3',
+    'footsteps': basePath + 'assets/footsteps.mp3',
+    'rope': basePath + 'assets/rope.mp3',
+    'ambient': basePath + 'assets/ambient.mp3',
     'silence': null, // no sound
-    'gasp': 'assets/gasp.mp3',
-    'door': 'assets/door.mp3'
+    'gasp': basePath + 'assets/gasp.mp3',
+    'door': basePath + 'assets/door.mp3'
   };
   
   const sfxPath = sfxMap[sfxType] || sfxType;
@@ -149,7 +159,7 @@ function playSFX(sfxType){
   }
   
   try{
-    el.sfxAudio.src = sfxPath || 'assets/talking.mp3';
+    el.sfxAudio.src = sfxPath || basePath + 'assets/talking.mp3';
     el.sfxAudio.volume = sfxVolume;
     el.sfxAudio.currentTime = 0;
     el.sfxAudio.play().catch(()=>{});

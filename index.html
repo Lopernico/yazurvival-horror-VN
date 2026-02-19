@@ -7,10 +7,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Base path configuration for GitHub Pages compatibility -->
+    <script>
+      // Calcula automáticamente el base path para funcionar en local y en GitHub Pages
+      (function() {
+        let basePath = window.location.pathname;
+        // Si la ruta termina con .html, obtener el directorio
+        if (basePath.endsWith('.html')) {
+          basePath = basePath.substring(0, basePath.lastIndexOf('/') + 1);
+        }
+        // Asegurar que termina con /
+        if (!basePath.endsWith('/')) {
+          basePath += '/';
+        }
+        // Guardar en window para que otros scripts lo usen
+        window.BASE_PATH = basePath;
+        console.log('Base path detectado:', window.BASE_PATH);
+      })();
+    </script>
+
     <div class="app">
       <main class="vn">
         <div class="scene" id="scene">
-          <img id="sprite" class="sprite" src="assets/Louie.png" alt="sprite" loading="eager" decoding="sync" />
+          <img id="sprite" class="sprite" alt="sprite" loading="eager" decoding="sync" />
           <div class="hearts" aria-hidden="true">
             <div class="hearts-scroll">
               <div class="hearts-track"></div>
