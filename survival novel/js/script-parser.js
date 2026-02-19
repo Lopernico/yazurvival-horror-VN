@@ -53,7 +53,7 @@ async function fetchScriptFromServer(){
   // prioriza window.SCRIPT si fue inyectado por el backend
   if(window.SCRIPT && typeof window.SCRIPT === 'object'){ prepareScript(window.SCRIPT); return; }
   try{
-    const res = await fetch('/dialogs/script.json', {cache:'no-store'});
+    const res = await fetch('./dialogs/script.json', {cache:'no-store'});
     if(res.ok){ const script = await res.json(); console.log('✓ Script cargado:', script.start, script.nodes.length + ' nodos'); prepareScript(script); return; }
   } catch(e){
     console.error('Error cargando script.json:', e);

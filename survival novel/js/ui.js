@@ -11,6 +11,21 @@ let openSpriteSrc = '';
 let closedSpriteSrc = '';
 let typingCompleteCallback = null;
 
+/**
+ * Encode UTF-8 string to Base64 (handles special characters)
+ */
+function _encodeUTF8toBase64(str){
+  try{
+    return btoa(unescape(encodeURIComponent(str)));
+  }catch(e){
+    try{
+      return btoa(str);
+    }catch(e){
+      return '';
+    }
+  }
+}
+
 // Lightweight sprite preload cache to avoid repeated decoding during toggles
 const _spritePreloadCache = {};
 function _preloadSprite(src){
@@ -628,10 +643,10 @@ let lastScriptHash = null;
 
 function initScriptMonitoring(){
   // Do initial check to skip first reload
-  fetch(`dialogs/script.json?t=${Date.now()}`)
+  fetch(`./dialogs/script.json?t=${Date.now()}`)
     .then(r => r.text())
     .then(txt => {
-      lastScriptHash = btoa(txt); // base64 encode as simple hash
+      lastScriptHash = _encodeUTF8toBase64(txt); // base64 encode as simple hash
       startScriptMonitoring();
     })
     .catch(e => console.log('Script monitoring start:', e));
@@ -639,10 +654,10 @@ function initScriptMonitoring(){
 
 function startScriptMonitoring(){
   setInterval(() => {
-    fetch(`dialogs/script.json?t=${Date.now()}`)
+    fetch(`./dialogs/script.json?t=${Date.now()}`)
       .then(r => r.text())
       .then(txt => {
-        const newHash = btoa(txt);
+        const newHash = _encodeUTF8toBase64(txt);
         if(lastScriptHash && newHash !== lastScriptHash){
           console.log('Script changed, reloading...');
           window.location.reload();
