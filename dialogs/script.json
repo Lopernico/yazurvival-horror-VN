@@ -1889,16 +1889,14 @@
 },
 {
   "id": "chapter3_routeA_livingroom_3",
-  "background": "assets/Sala.jpg",
-  "text": "¿Quieres sentarte?",
+  "background": "assets/Sala.jpg", 
   "type": "dialog",
   "text": "Toma una figura y la limpia con el dedo.",
   "next": "chapter3_routeA_livingroom_421"
 }, 
 {
   "id": "chapter3_routeA_livingroom_421",
-  "background": "assets/Sala.jpg",
-  "text": "Es un sofá viejo pero cómodo.",
+  "background": "assets/Sala.jpg", 
   "speaker": "YAZUMIMOON",
   "displayName": "Yazumimoon",
   "text": "¿Te gusta alguna?",
@@ -1906,8 +1904,8 @@
 },
 
 {
-  "background": "assets/Sala.jpg",
-  "text": "El rincón de la sala tiene una luz tenue.",
+    "id": "chapter3_routeA_bathroom_73",
+  "background": "assets/Sala.jpg", 
   "type": "dialog",
   "sprite":"yazu cerrada.png",
   "text": "yazu toma varias figuras y las presenta ante ti, esperando tu eleccion",
@@ -1916,11 +1914,7 @@
       "text": "Elegir figura de anime y decir que te gusta.",
       "next": "chapter3_routeA_livingroom_4"
     },
-    {
-      "text": "Elegir figura de videojuego y decir que te gusta.",
-      "background": "assets/Sala.jpg",
-      "text": "Hay una mesa con tazas vacías."
-    },
+ 
     {
       "text": "Elegir figura de Pelicula y decir que te gusta.",
       "next": "chapter3_routeA_livingroom_4"
@@ -1929,8 +1923,7 @@
 },
 {
   "id": "chapter3_routeA_livingroom_4",
-  "background": "assets/Sala.jpg",
-  "text": "La televisión muestra estática.",
+  "background": "assets/Sala.jpg", 
   "speaker": "YAZUMIMOON",
   "displayName": "Yazumimoon",
   "text": "AYY! que casualidad esa es mi favorita tambien!.",
@@ -1938,8 +1931,7 @@
 },
 {
   "id": "chapter3_routeA_bedroom_12",
-  "background": "assets/Sala.jpg",
-  "text": "Un poster cuelga torcido.",
+  "background": "assets/Sala.jpg", 
   "sprite":"yazu cerrada.png",
   "text": "Que gran coincidencia...",
    "choices": [
@@ -1949,13 +1941,13 @@
     },
     {
       "text": "[ponerla a prueba] Perdon me confundi, quise decir esa otra.(apuntas a una figura diferente)",
-      "background": "assets/Sala.jpg",
-      "text": "Hay un paquete sin abrir."
+      "background": "assets/Sala.jpg",  
+      "next": "chapter3_routeA_livingroom_45"
     }
   ] 
 },
 {
-  "id": "chapter3_routeA_livingroom_41",
+  "id": "chapter3_routeA_livingroom_45",
   "type": "dialog",
   "speaker": "YAZUMIMOON",
       "background": "assets/Sala.jpg",
@@ -2606,120 +2598,105 @@
 },
 {
   "id": "chapter3_routeB_bedroom_6",
-  "background": "assets/Cuarto.jpg",
-  "text": "Cada caja tiene una marca discreta.\nUna fecha Y una letra escrita a mano.\nNada más.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "La primera dice:\n\"2013 – M\".",
   "next": "chapter3_routeB_bedroom_7"
 },
 {
   "id": "chapter3_routeB_bedroom_7",
-  "background": "assets/Cuarto.jpg",
-  "text": "Hay una foto pegada dentro de una tapa.\nUn recuerdo.\nUna sonrisa que conoces.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "Dentro hay una pulsera gastada.\nY una foto doblada.\nDos adolescentes sonriendo.\nUna de ellos es Yazu.",
   "next": "chapter3_routeB_bedroom_8"
 },
 {
   "id": "chapter3_routeB_bedroom_8",
-  "background": "assets/Cuarto.jpg",
-  "text": "Encuentras la letra de una canción.\nEstá subrayada en varios versos.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "Al reverso de la foto:\n\"Decía que siempre estaríamos juntos.\"",
   "next": "chapter3_routeB_bedroom_9"
 },
 {
   "id": "chapter3_routeB_bedroom_9",
-  "background": "assets/Cuarto.jpg",
-  "text": "Hay una nota doblada.\nDentro pone:\n\"Piensa en mi cuando no pueda verte.\"",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "La siguiente caja:\n\"2016 – R\".",
   "next": "chapter3_routeB_bedroom_10"
 },
 {
   "id": "chapter3_routeB_bedroom_10",
-  "background": "assets/Cuarto.jpg",
-  "text": "En el fondo del cajon hay una llave.\nNo parece de esta casa.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "Un boleto de cine.\nUn llavero sencillo.Un papel impreso:\n\"Gracias por escucharme.\"",
   "next": "chapter3_routeB_bedroom_11"
 },
 {
   "id": "chapter3_routeB_bedroom_11",
-  "background": "assets/Cuarto.jpg",
-  "text": "Al abrir un sobre encuentras un billete\ncon una dirección garabateada.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "No hay nota final.",
   "next": "chapter3_routeB_bedroom_12"
 },
 {
   "id": "chapter3_routeB_bedroom_12",
-  "background": "assets/Cuarto.jpg",
-  "text": "No hay nota final.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "La tercera caja dice:\n\"2019 – L\".",
   "next": "chapter3_routeB_bedroom_13"
 },
 {
   "id": "chapter3_routeB_bedroom_13",
-  "background": "assets/Cuarto.jpg",
-  "text": "La última página está rasgada.\nSolo queda esa mitad.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "Dentro hay una sudadera doblada.\nAún conserva forma.\n Como si alguien hubiera prometido volver por ella.",
   "next": "chapter3_routeB_bedroom_14"
 },
 {
   "id": "chapter3_routeB_bedroom_14",
-  "background": "assets/Cuarto.jpg",
-  "text": "Un mensaje corto: \"No volveré\".",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "Las siguientes cajas son distintas.\nNo en tamaño.\nEn cuidado.",
   "next": "chapter3_routeB_bedroom_15"
 },
 {
   "id": "chapter3_routeB_bedroom_15",
-  "background": "assets/Cuarto.jpg",
-  "text": "Hay una nota para ti.\nLa letra es conocida.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "La cuarta caja:\n\"2021 – J\".\nEl cartón está reforzado.\nEl interior forrado con tela suave.",
   "next": "chapter3_routeB_bedroom_16"
 },
 {
   "id": "chapter3_routeB_bedroom_16",
-  "background": "assets/Cuarto.jpg",
-  "text": "En el margen hay un mapa.\nMarcas con cruces.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "Dentro hay una billetera.\nVacía.\nUna copia de una llave.\nY una hoja con horarios escritos a lápiz.",
   "next": "chapter3_routeB_bedroom_17"
 },
 {
   "id": "chapter3_routeB_bedroom_17",
-  "background": "assets/Cuarto.jpg",
-  "text": "Algunas cajas contienen cartas antiguas.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "No hay mensajes.",
   "next": "chapter3_routeB_bedroom_18"
 },
 {
   "id": "chapter3_routeB_bedroom_18",
-  "background": "assets/Cuarto.jpg",
-  "text": "Una nota final dice: \"cuida de mi\".",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "La quinta caja:\n\"2022 – D\".\nEstá mejor conservada que las demás.",
   "next": "chapter3_routeB_bedroom_19"
 },
 {
   "id": "chapter3_routeB_bedroom_19",
-  "background": "assets/Cuarto.jpg",
-  "text": "Encuentras un plano con horarios anotados.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "text": "Dentro hay un reloj.\nUn celular antiguo sin batería.\nY una nota corta:\n\"Aquí estaba a salvo.\"",
   "next": "chapter3_routeB_bedroom_21"
 }, 
 {
   "id": "chapter3_routeB_bedroom_21",
-  "background": "assets/Cuarto.jpg",
-  "text": "Hay una lista de nombres tachados.",
+  "background": "assets/Cuarto.jpg", 
   "sprite": "cajas.jpg",
   "effects": {
     "cameraShake": true
@@ -2729,10 +2706,7 @@
   "next": "chapter3_routeB_bedroom_22"
 },
    {
-"background": "assets/Cuarto.jpg",
-    "text": "Una caja marcada con tu inicial.",
-
-  "sprite": "cajas.jpg",
+ 
   "id": "chapter3_routeB_bedroom_22",
   "type": "dialog",
   
@@ -2743,9 +2717,7 @@
   "text": "Está vacía.\nDemasiado limpia.\nComo si hubiera sido preparada con anticipación.",
   "next": "chapter3_routeB_bedroom_23"
     },{
-         "background": "assets/Cuarto.jpg",
-    "text": "Dentro hay una pulsera con una nota.",
-
+   
   "sprite": "cajas.jpg",
   "id": "chapter3_routeB_bedroom_23",
   "type": "dialog",
@@ -2756,16 +2728,13 @@
 },
 {
   "id": "chapter3_routeB_bedroom_24",
-  "background": "assets/Cuarto.jpg",
-  "text": "La nota dice: \"no lo olvides\".",
+  "background": "assets/Cuarto.jpg", 
   "text": "bajas a la cocina antes de que Yazu venga a buscarte",
   
   "next": "chapter3_routeB_kitchen_1"
 },
 {
-  "id": "chapter3_routeB_kitchen_1",
-  "background": "assets/Cuarto.jpg",
-  "text": "Cierras la caja y la llevas contigo.",
+  "id": "chapter3_routeB_kitchen_1", 
   "background": "assets/Cocina.jpg",
   "text": "Llegas a la cocina.\nYazu ya está ahí.\nTe mira.",
   "next": "chapter3_routeB_kitchen_2"
@@ -3956,4 +3925,3 @@
 
     ]
 }
-
