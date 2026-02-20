@@ -1,4 +1,4 @@
-﻿{
+{
     "start":  "scene1_thought1",
     "nodes":  [
                   {
@@ -1409,7 +1409,7 @@
                                           "effects":  {
                                       "cameraShake":  true
                                   },
-                      "text":  "la puerta del patio trasero\n Cerrada.",
+                      "text":  "la puerta del Patio trasero\n Cerrada.",
                       "next":  "chapter3_scene2_run_dialog24"
                   },
                   {
@@ -3487,35 +3487,35 @@
 {
   "id": "chapter3_routeB_escape_37",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "El aire frío te golpea la cara.\nEl cielo.\nLa luz.",
   "next": "chapter3_routeB_escape_38"
 },
 {
   "id": "chapter3_routeB_escape_38",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "Sales corriendo.",
   "next": "chapter3_routeB_escape_39"
 },
 {
   "id": "chapter3_routeB_escape_39",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "No miras atrás.",
   "next": "chapter3_routeB_escape_40"
 },
 {
   "id": "chapter3_routeB_escape_40",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "El terreno es irregular.\nTierra.\nMadera vieja.",
   "next": "chapter3_routeB_escape_41"
 },
 {
   "id": "chapter3_routeB_escape_41",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "effects": {
     "cameraShake": true
   },
@@ -3525,83 +3525,83 @@
 {
   "id": "chapter3_routeB_escape_42",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "Un clavo.",
   "next": "chapter3_routeB_escape_43"
 },
 {
   "id": "chapter3_routeB_escape_43",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "Pierdes el equilibrio.",
   "next": "chapter3_routeB_escape_44"
 },
 {
   "id": "chapter3_routeB_escape_44",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "Caes.",
   "next": "chapter3_routeB_escape_45"
 },
 {
   "id": "chapter3_routeB_escape_45",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "En un intento desesperado por amortiguar la caída, giras tu cabeza.",
   "next": "chapter3_routeB_escape_46"
 },
 {
   "id": "chapter3_routeB_escape_46",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "un segundo antes del impacto, ves la roca frente a ti.",
   "next": "chapter3_routeB_escape_47"
 },
 {
   "id": "chapter3_routeB_escape_47",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "grande, puntiaguda... manchada de rojo carmesi.",
   "next": "chapter3_routeB_escape_48"
 },
 {
   "id": "chapter3_routeB_escape_48",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "No eres el primero...",
   "next": "chapter3_routeB_escape_49"
 },
 {
   "id": "chapter3_routeB_escape_49",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "Ese es tu ultimo pensamiento consciente.",
   "next": "chapter3_routeB_escape_54"
 },{
   "id": "chapter3_routeB_escape_54",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "El cielo se vuelve borroso.",
   "next": "chapter3_routeB_escape_55"
 },
 {
   "id": "chapter3_routeB_escape_55",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "El frío ya no duele.",
   "next": "chapter3_routeB_escape_58"
 },
 {
   "id": "chapter3_routeB_escape_58",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "Todo se apaga.",
   "next": "chapter3_routeB_escape_end"
 },
 {
   "id": "chapter3_routeB_escape_end",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "FIN — RUTA B\n\nMorir libre."
 },
 {
@@ -3934,14 +3934,14 @@
 {
   "id": "chapter3_routeD_control_end",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "Sales.\nEl aire es distinto.\nNo porque sea mejor.\nSino porque ahora es tuyo.",
 "next":"chapter3_routeD_control_end1"
 },
 {
   "id": "chapter3_routeD_control_end1",
   "type": "dialog",
-      "background": "assets/patio.jpg",
+      "background": "assets/Patio.jpg",
   "text": "FIN — RUTA D (FINAL VERDADERO)",
 "next":null
 }
