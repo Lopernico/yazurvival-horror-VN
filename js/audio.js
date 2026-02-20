@@ -3,7 +3,7 @@
  * Maneja música, efectos de sonido y voces de personajes
  */
 
-let musicVolume = 0.6;
+let musicVolume = 0.04;  // very low volume
 let sfxVolume = 0.9;
 // playlist configured for the app (user-provided files)
 function getBgTracks(){

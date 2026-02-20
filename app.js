@@ -18,6 +18,7 @@ const el = {
   speaker: document.getElementById('speaker'),
   text: document.getElementById('text'),
   sprite: document.getElementById('sprite'),
+  scene: document.getElementById('scene'),
   choices: document.getElementById('choices'),
   backBtn: document.getElementById('backBtn'),
   nextBtn: document.getElementById('nextBtn'),
@@ -59,6 +60,9 @@ el.backBtn.onclick = back;
 // global controls added in UI
 if(el.restartNowBtn){ el.restartNowBtn.onclick = restartGame; }
 if(el.backToDecisionNowBtn){ el.backToDecisionNowBtn.onclick = backToLastDecision; }
+// Route D jump button
+const routeDJumpBtn = document.getElementById('routeDJumpBtn');
+if(routeDJumpBtn){ routeDJumpBtn.onclick = jumpToRouteD; }
 
 /**
  * Click handlers for scene and dialogue

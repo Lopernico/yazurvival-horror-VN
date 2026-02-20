@@ -134,6 +134,21 @@ body::before{
   min-height:60vh;            /* Altura mínima del 60% de la ventana */
   will-change:contents;       /* Optimiza para cambios frecuentes */
 } 
+/* Pseudo-capa para el fondo de la escena. Usamos una variable CSS `--scene-bg`
+   para que JS pueda cambiar la imagen sin conflictos con overlays o hijos. */
+.scene::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--scene-bg, none);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: contrast(1.05) brightness(0.95);
+  z-index: 0; /* Detrás del contenido de la escena */
+  pointer-events: none;
+}
+.scene > *{ position: relative; z-index: 1; }
 /* ========================================
    PANTALLA DE TÍTULO
    ======================================== */

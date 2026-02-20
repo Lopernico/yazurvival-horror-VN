@@ -1,0 +1,3957 @@
+﻿{
+    "start":  "scene1_thought1",
+    "nodes":  [
+                  {
+                      "id":  "scene1_thought1",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "¿…Qué pasó?",
+                      "displayName":  "",
+                      "effects":  {
+                                      "slowType": true,
+                                      "cameraWobble": { "intensity": 6, "duration": 900 }
+                                  },
+                      "next":  "scene1_thought2"
+                                },
+                  {
+                      "id":  "scene1_thought2",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "¿Dónde estoy?",
+                      "displayName":  "",
+                      "effects":  {
+                                      "slowType": true,
+                                      "cameraWobble": { "intensity": 4, "duration": 800 }
+                                  },
+                      "next":  "scene1_thought3"
+                  },
+                  {
+                      "id":  "scene1_thought3",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "Me duele la cabeza…",
+                      "displayName":  "",
+                      "next":  "scene2_thought1"
+                  },
+                  {
+                      "id":  "scene2_thought1",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "¿Qué está pasando?",
+                      "displayName":  "",
+                      "effects":  {
+                                      "newScene":  true
+                                  },
+                      "next":  "scene2_thought2"
+                  },
+                  {
+                      "id":  "scene2_thought2",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "¿Cómo llegué aquí?",
+                      "displayName":  "",
+                      "next":  "scene2_flashback1"
+                  },
+                  {
+                      "id":  "scene2_flashback1",
+                      "type":  "flashback",
+                      "text":  "Intentas reminisar lo ultimo que recuerdas...",
+                      "effects": {
+                                      "opacity": 0.9,
+                                      "fontStyle": "italic",
+                                      "textShadow": "0 0 6px rgba(140,140,200,0.45)"
+                                  },
+                      "next":  "scene22_flashback1"
+                  },
+                   {
+                      "id":  "scene22_flashback1",
+                      "type":  "flashback",
+                      "text":  "Una calle poco iluminada.",
+                      "effects": {
+                                      "opacity": 0.88,
+                                      "fontStyle": "italic",
+                                      "textShadow": "0 0 6px rgba(140,140,200,0.35)"
+                                  },
+                      "next":  "scene2_flashback2"
+                  },
+                  {
+                      "id":  "scene2_flashback2",
+                      "type":  "flashback",
+                      "text":  "Una camioneta morada.\nVidrios polarizados.",
+                      "effects":  {
+                                      "opacity": 0.82,
+                                      "fontStyle": "italic",
+                                      "textShadow": "0 0 8px rgba(160,160,255,0.45)"
+                                  },
+                      "next":  "scene2_flashback3"
+                  },
+                  {
+                      "id":  "scene2_flashback3",
+                      "type":  "flashback",
+                      "text":  "Un dolor seco.\nSilencio.\nOscuridad.",
+                      "effects":  {
+                                      "opacity": 0.7,
+                                      "fontStyle": "italic",
+                                      "textShadow": "0 0 10px rgba(120,120,180,0.55)",
+                                      "cameraWobble": { "intensity": 8, "duration": 1000 },
+                                      "sfx": "gasp"
+                                  },
+                      "next":  "scene3_choice1"
+                  },
+                  {
+                      "id":  "scene3_choice1",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "no reconoces el lugar pero puedes ver la salida.",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "1) Intentar irte",
+                                          "next":  "scene3_choice1_result"
+                                      },
+                                      {
+                                          "text":  "2) Preguntar si hay alguien",
+                                          "next":  "scene3_shout1"
+                                      }
+                                  ]
+                  },
+                  {
+ "id":  "scene3_choice1_result",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "con tu cabeza aun doliendo, intentas levantarte y buscar una salida…\n\nPero estás atado. No puedes moverte.",
+                      "displayName":  "",
+                      "effects":  {
+                                      "fontSize":  "small"
+                                  },
+                      "next":  "scene3_choice1_disabled"
+                  },
+                  {
+                      "id":  "scene3_choice1_disabled",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "¿Qué intentas hacer?",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "2) Preguntar si hay alguien",
+                                          "next":  "scene3_shout1"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene3_shout1",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "¿Hola…?",
+                      "displayName":  "",
+                      "effects":  {
+                                      "fontSize":  "small"
+                                  },
+                      "next":  "scene3_shout2"
+                  },
+                  {
+                      "id":  "scene3_shout2",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "¿Hay alguien ahí?",
+                      "displayName":  "",
+                      "effects":  {
+                                      "fontSize":  "normal"
+                                  },
+                      "next":  "scene3_shout3"
+                  },
+                  {
+                      "id":  "scene3_shout3",
+                      "type":  "thought",
+                      "speaker":  "",
+                      "text":  "¡AYUDA! ¡SOCORRO!",
+                      "displayName":  "",
+                      "effects":  {
+                                      "fontSize":  "large",
+                                      "cameraShake":  true,
+                                      "cameraWobble": { "intensity": 8, "duration": 900 },
+                                      "sfx": "gasp"
+                                  },
+                      "next":  "scene4_appear"
+                  },
+                  {
+                      "id":  "scene4_appear",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "text":  "¡Oh por dios!\n¿Estás bien?",
+                      "displayName":  "Mujer desconocida",
+                      "next":  "scene4_silence",
+                      "effects":  {
+                                      
+                                      "cameraZoom": { "amount": 1.5, "duration": 700 },
+                                      "sfx": "gasp"
+                                  }
+                  },
+                  {
+                      "id":  "scene4_silence",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "La chica te mira preocupada, revisando si estas lastimado",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "1) Pedirle ayuda",
+                                          "next":  "scene5_help"
+                                      },
+                                      {
+                                          "text":  "2) Preguntarle quién es",
+                                          "next":  "scene53_who_result"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene5_help",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Por favor… ayúdame…",
+                      "displayName":  "",
+                      "effects":  {
+                                      "silence":  1000
+                                  },
+                      "next":  "scene5_who_result"
+                  },
+                   {
+                      "id":  "scene5_who_result",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  " La mujer te mira sin decir nada.",
+                      "displayName":  "",
+                      "next":  "scene51_who"
+                  },
+                  {
+                      "id":  "scene51_who",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "No responde.",
+                      "displayName":  "",
+                      "next":  "scene52_who_result"
+                  },{
+                      "id":  "scene52_who_result",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Estara en shock o algo…",
+                      "displayName":  "",
+                      "next":  "scene53_who_result"
+                  },
+                  {
+                      "id":  "scene53_who_result",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON", 
+                      
+                      "text":  "Yo soy Yazumimoon.Pero puedes llamarme… gatita.",
+                      "displayName":  "Mujer desconocida",
+                      "effects":  {
+                                      "pauseAt":  "\\n\\n[pausa]\\n\\n"
+                                  },
+                      "next":  "scene512_who"
+                  },
+                   {
+                      "id":  "scene512_who",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "…",
+                      "displayName":  "",
+                      "next":  "scene52_who"
+                  },
+                   {
+                      "id":  "scene52_who",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "¿Que…?",
+                      "displayName":  "",
+                      "next":  "scene53_who"
+                  },
+                   {
+                      "id":  "scene53_who",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "...",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "next":  "scene6_choice"
+                  },
+                  {
+                      "id":  "scene6_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "La situación es demasiado grave como para reaccionar a eso. Aun así… algo en tu interior se siente extrañado. ",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "O-okay… ¿podrías ayudarme a salir de aquí, por favor?",
+                                          "next":  "scene6_calm"
+                                      },
+                                      {
+                                          "text":  "¡Déjate de joder y sácame de aquí ahora!",
+                                          "next":  "scene6_aggressive"
+                                      }
+                                  ],
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "scene6_calm",
+                      "type":  "dialog",
+                      "speaker":  "", 
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "O-okay… ¿podrías ayudarme a salir de aquí, por favor?",
+                      "displayName":  "",
+                      "next":  "scene7_promise" 
+                  },
+                  {
+                      "id":  "scene6_aggressive",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "¡Déjate de joder y sácame de aquí ahora!",
+                      "displayName":  "",
+                      "next":  "scene7_promise",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "scene7_promise",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "yazumimoon se queda completamente quieta.",
+                      "displayName":  "",
+                      "next":  "scene8_choice",
+                      "effects":  {
+                                      
+                                  }
+                  },
+                   {
+                      "id":  "scene7_promise",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Te observa fijamente.",
+                      "displayName":  "",
+                      "next":  "scene8_choice",
+                      "effects":  {
+                                       
+                                  }
+                  },
+                   {
+                      "id":  "scene7_promise",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "text":  "Hooo… sí… ayudarte…\n\nTe ayudaré a salir de aquí.",
+                      "displayName":  "",
+                      "next":  "scene71_promise",
+                      "effects":  {
+                                       
+                                  }
+                  },
+{
+                      "id":  "scene71_promise",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "text":  "Dame un segundo. Solo tengo que encontrar algo para liberarte.",
+                      "displayName":  "",
+                      "next":  "scene8_choice",
+                      "effects":  {
+                                      
+                                  }
+                  },
+                  {
+                      "id":  "scene8_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "La chica rara empieza a subir las escaleras.",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "¡ESPERA! ¡NO TE VAYAS, POR FAVOR!",
+                                          "next":  "scene8_desperation",
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  }
+                                      },
+                                      {
+                                          "text":  "¡Gracias! Por favor… apúrate, antes de que quien me hizo esto vuelva…",
+                                          "next":  "scene8_grateful"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene8_desperation",
+                      "type":  "dialog",
+                      "speaker":  "",
+
+                      "text":  "Te ignora y continúa subiendo.",
+                      "displayName":  "",
+                      "next":  "scene81_desperation",
+                      "effects":  {
+                                      
+                                  }
+                  },
+                   
+                  {
+                      "id":  "scene8_grateful",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "Yazumimoon suelta una pequeña risa.",
+                      "displayName":  "",
+                      "next":  "scene81_desperation",
+                      "effects":  {
+                                  
+                                  }
+                  },
+                  {
+                      "id":  "scene81_desperation",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  " Se detiene un segundo.",
+                      "displayName":  "",
+                      "next":  "scene82_desperation",
+                      "effects":  {
+                                    
+                                  }
+                  },
+                  {
+                      "id":  "scene82_desperation",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "Te mira por el rabillo del ojo…",
+                      "displayName":  "",
+                      "next":  "scene812_desperation",
+                      "effects":  {
+                                      
+                                  }
+                  },
+                  {
+                      "id":  "scene812_desperation",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "continúa subiendo.",
+                      "displayName":  "",
+                      "next":  "31horas_despues",
+                      "effects":  {
+                                     
+                                  }
+                  },
+                   {
+                      "id":  "31horas_despues",
+                      "type":  "Title",
+                      "speaker":  "",
+                      "text":  "3 horas después",
+                      "displayName":  "",
+                      "next":  "32horas_despues",
+                      "effects":  {
+                                      "fadeToBlackFadeIn": { "duration": 1200, "holdBlack": 300 }
+                                  }
+                  },
+                   {
+                      "id":  "32horas_despues",
+                      "type":  "Title",
+                      "speaker":  "",
+                      "text":  "Tres horas en completa oscuridad.",
+                      "displayName":  "",
+                      "next":  "33horas_despues",
+                      "effects":  {
+                                      
+                                  }
+                  },
+                   {
+                      "id":  "33horas_despues",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "El tiempo se estira.",
+                      "displayName":  "",
+                      "next":  "3horas_despues",
+                      "effects":  {
+                                   
+                                  }
+                  },
+                   {
+                      "id":  "3horas_despues",
+                      "type":  "dialog", 
+                      "text":  "El silencio pesa.", 
+                      "next":  "scene10_woman_back" 
+                  },
+                  {
+                      "id":  "scene10_woman_back",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON"  , 
+                      "text":  "¿Como tas muchacho?",
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "displayName":  "",
+                      "next":  "scene10_choice"
+                  },
+                  {
+                      "id":  "scene10_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Por que habra tardado tanto?",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "Gracias a Dios volviste…",
+                                          "next":  "scene10_thankful"
+                                      },
+                                      {
+                                          "text":  "No… No me vas a liberar, ¿verdad?",
+                                          "next":  "scene10_suspicious"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene10_thankful",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "¿Trajiste algo para liberarme?",
+                      "displayName":  "",
+                      "next":  "scene11_gatita"
+                  },
+                  {
+                      "id":  "scene10_suspicious",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Yazumimoon te observa en silencio.\nDemasiado tiempo.",
+                      "displayName":  "",
+                      "next":  "scene11_gatita"
+                  },
+                  {
+                      "id":  "scene11_gatita",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "text":  "Llámame… gatita.", 
+                      "next":  "scene11_choice",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "scene11_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "la chica extraña te mira fijamente, esperando tu respuesta.",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "… Gatita….",
+                                          "next":  "scene11_option_a"
+                                      },
+                                      {
+                                          "text":  "¿Dijiste… gatita?",
+                                          "next":  "scene11_option_a"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene11_option_a",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Yazumimoon se sonroja intensamente",
+                      "displayName":  "",
+                      "next":  "scene11_option_b"
+                  },
+                  {
+                      "id":  "scene11_option_b",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "Sale corriendo del sótano, tapándose la cara, riendo nerviosamente.",
+                      "displayName":  "",
+                      "next":  "scene11_reaction_choice"
+                  },
+                  {
+                      "id":  "scene11_reaction_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "Te deja solo otra vez.",
+                      "displayName":  "",
+                      "choices":  [
+                                      {
+                                          "text":  "\"Espera no te vay…\"",
+                                          "next":  "scene12_closing"
+                                      },
+                                      {
+                                          "text":  "\"Mierda…\"",
+                                          "next":  "scene12_closing"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "scene12_closing",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "Dos horas más pasan en la oscuridad.",
+                      "displayName":  "",
+                      "next":  "scene123_closing",
+                      "effects":  {
+                                      "fadeToBlackFadeIn": { "duration": 1200, "holdBlack": 300 }
+                                  }
+                  },
+                    {
+                      "id":  "scene123_closing",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "Pasos nuevamente.",
+                      "displayName":  "",
+                      "next":  "scene1234_closing"
+                  },
+                    {
+                      "id":  "scene1234_closing",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "text":  "Yazumimoon baja las escaleras.",
+                      "displayName":  "",
+                      "next":  "scene12_final"
+                  },
+                  {
+                      "id":  "scene12_final",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "text":  "Así es…",
+                      "displayName":  "",
+                      "next":  "scene123_final"
+                  },
+                  
+                  {
+                      "id":  "scene123_final",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "text":  "yo soy tu gatita.",
+                      "displayName":  "",
+                      "next":  "scene1234_final"
+                  },
+                  {
+                      "id":  "scene1234_final",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Sus manos juegan nerviosamente con la manga de su ropa.",
+                      "displayName":  "",
+                      "next":  "chapter2_scene1_intro"
+                  },
+                  {
+                      "id":  "chapter2_scene1_intro",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Suena raro, ¿verdad?\n\nPero es lindo…\nme gusta cuando las cosas tienen nombres especiales.",
+                      "next":  "chapter2_scene1_choice"
+                  },
+                  {
+                      "id":  "chapter2_scene1_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "¿Qué respondes?",
+                      "choices":  [
+                                      {
+                                          "text":  "Supongo que… si a ti te gusta, está bien.",
+                                          "next":  "chapter2_scene1_empathy"
+                                      },
+                                      {
+                                          "text":  "¿Por qué me tienes aquí?",
+                                          "next":  "chapter2_scene1_caution"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter2_scene1_empathy",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "yazu se sonroja",
+                      "next":  "chapter2_scene1_empathy_dialog",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter2_scene1_empathy_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "¿En serio…?\nHehe… gracias.",
+                      "next":  "chapter2_scene2_dialog3"
+                  },
+                  {
+                      "id":  "chapter2_scene1_caution",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "¿Por qué me tienes aquí?",
+                      "next":  "chapter2_scene1_caution_dialog"
+                  },
+                  {
+                      "id":  "chapter2_scene1_caution_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Porque es lindo tener compañía, ¿no crees?",
+                      "next":  "chapter2_scene2_dialog1",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter2_scene2_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "No te asustes,\nNo estás en peligro.",
+                      "next":  "chapter2_scene2_dialog12" 
+                  },
+                   {
+                      "id":  "chapter2_scene2_dialog12",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Esto es solo… un lugar tranquilo. \nNadie molesta. \nNadie interrumpe.",
+                      "next":  "chapter2_scene2_dialog3" 
+                  },
+                  {
+                      "id":  "chapter2_scene2_dialog3",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "A veces… las personas necesitan parar un poco.\nEl mundo allá afuera es muy ruidoso.",
+                      "next":  "chapter2_scene2_choice" 
+                  },
+                  {
+                      "id":  "chapter2_scene2_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "¿Cómo respondes?",
+                      "choices":  [
+                                      {
+                                          "text":  "Supongo que sí… últimamente todo ha sido muy pesado.",
+                                          "next":  "chapter2_scene2_empathy"
+                                      },
+                                      {
+                                          "text":  "No me interesa. Quiero que me liberes. Ya!!.",
+                                          "next":  "chapter2_scene2_caution"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter2_scene2_empathy",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu asiente con demasiada rapidez.",
+                      "next":  "chapter2_scene2_empathy_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene2_empathy_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Lo sabía…\nlo vi en ti desde que te seguí—", 
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "next":  "chapter2_scene2_empathy_dialog2"
+                  },
+                  {
+                      "id":  "chapter2_scene2_empathy_dialog2",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Quiero decir… desde que te vi.",
+                      "next":  "chapter2_scene3_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene2_caution",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Un silencio incómodo llena el ambiente.",
+                      "next":  "chapter2_scene2_caution_dialog"
+                  },
+                  {
+                      "id":  "chapter2_scene2_caution_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "A veces aceptamos cosas sin darnos cuenta.\nCuando confiamos.",
+                      "next":  "chapter2_scene3_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene3_dialog1",
+                      "type":  "dialog", 
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Yazu se levanta de golpe, animada.",
+                      "next":  "chapter2_scene3_dialog112"
+                  },
+                  {
+                      "id":  "chapter2_scene3_dialog112",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Oh, cierto.\nCasi lo olvido.",
+                      "next":  "chapter2_scene3_dialog113"
+                  },
+                  {
+                      "id":  "chapter2_scene3_dialog113",
+                      "type":  "dialog", 
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Yazu sube corriendo los escalones \n vuelve con una botella de agua y algo de comida simple.",
+                      "next":  "chapter2_scene3_dialog2"
+                  },
+                  {
+                      "id":  "chapter2_scene3_dialog2",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Toma.\nNo quiero que pases hambre.",
+                      "next":  "chapter2_scene3_dialog3"
+                  },
+                  {
+                      "id":  "chapter2_scene3_dialog3",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Esto es parte de la actividad.\nPasar tiempo juntos.\nHablar.\nConocernos.",
+                      "next":  "chapter2_scene3_choice"
+                  },
+                  {
+                      "id":  "chapter2_scene3_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "displayName":  "",
+                      "text":  "¿Cómo respondes?",
+                      "choices":  [
+                                      {
+                                          "text":  "Gracias… es amable de tu parte.",
+                                          "next":  "chapter2_scene3_empathy"
+                                      },
+                                      {
+                                          "text":  "¿Actividad? Esto no es un picnic, me tienes atado en tu sótano.",
+                                          "next":  "chapter2_scene3_caution"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter2_scene3_empathy",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu se sonroja.",
+                      "next":  "chapter2_scene3_empathy_dialog"
+                  },
+                  {
+                      "id":  "chapter2_scene3_empathy_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Nadie me ha dicho eso en mucho tiempo…\n\nMe alegra que te guste estar aquí.",
+                      "next":  "chapter2_scene4_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene3_caution",
+                      "type":  "dialog",
+                      "sprite":  "yazu cerrada.png",
+                      "speaker":  "",
+                      "displayName":  "",
+                      "text":  "Yazu se encoge de hombros.",
+                      "next":  "chapter2_scene3_caution_dialog"
+                  },
+                  {
+                      "id":  "chapter2_scene3_caution_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Vamos…\n Es como una cita…\npero mejor.\nSin distracciones.",
+                      "next":  "chapter2_scene4_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene4_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Puedo contarte algo…\npero prométeme que no te burlarás.",
+                      "next":  "chapter2_scene4_choice",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter2_scene4_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Junta las manos.\nsus ojos se iluminan",
+                      "choices":  [
+                                      {
+                                          "text":  "Te lo prometo.",
+                                          "next":  "chapter2_scene4_empathy"
+                                      },
+                                      {
+                                          "text":  "Esto no es divertido. Suéltame ya.",
+                                          "next":  "chapter2_scene4_caution"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu sonríe ampliamente.",
+                      "next":  "chapter2_scene4_empathy_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Me gustan las cosas raras.\nLas personas raras.",
+                      "next":  "chapter2_scene4_empathy_dialog2"
+                  },{
+                      "id":  "chapter2_scene4_caution",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu ríe nerviosa.",
+                      "next":  "chapter2_scene4_caution_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene4_caution_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Eres gracioso…\nme gusta eso.",
+                      "next":  "chapter2_scene4_empathy_dialog2"
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_dialog2",
+                      "type":  "dialog",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "esa fue la confesion? parece que le gusto a la loca",
+                      "next":  "chapter2_scene4_empathy_dialog3"
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_dialog3",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Siempre quise alguien a quien poder decirle eso.\n Alguien que no se fuera.",
+                      "next":  "chapter2_scene4_empathy_choice",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_choice",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "",
+                      "text":  "Tú no te irás, ¿verdad?",
+                      "choices":  [
+                                      {
+                                          "text":  "No… no me iré.",
+                                          "next":  "chapter2_scene4_empathy_stay"
+                                      },
+                                      {
+                                          "text":  "¿Te estás burlando de mí?",
+                                          "next":  "chapter2_scene4_empathy_mock"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_stay",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  " Yazu parece profundamente aliviada.",
+                      "next":  "chapter2_scene4_empathy_stay_dialog"
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_stay_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Sabía que podía confiar en ti.",
+                      "next":  "chapter3_scene1_dialog1"
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_mock",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu baja la mirada.",
+                      "next":  "chapter2_scene4_empathy_mock_dialog",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter2_scene4_empathy_mock_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Está bien…\na veces la gente tarda en entender.",
+                      "next":  "chapter3_scene1_dialog1",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter3_scene1_dialog1",
+                      "type":  "dialog",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Las horas pasan lentamente en el sótano.\n cuanto ha pasado? un dia? dos? no lo sabes…",
+                      "next":  "chapter3_scene1_dialog",
+                      "effects":  {
+                                      "fadeToBlackFadeIn": { "duration": 1200, "holdBlack": 300 },
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter3_scene1_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "He estado pensando en ti.",
+                      "next":  "chapter3_scene1_choice"
+                  },
+                  {
+                      "id":  "chapter3_scene1_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Se sienta frente a ti.\nTe mira a los ojos.",
+                      "choices":  [
+                                      {
+                                          "text":  "Yo también he pensado en ti.",
+                                          "next":  "chapter3_scene1_empathy"
+                                      },
+                                      {
+                                          "text":  "Estas pensando en como me vas a arrancar la piel y hacer un abrigo con ella?",
+                                          "next":  "chapter3_scene1_caution"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter3_scene1_empathy",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu sonríe, claramente nerviosa.",
+                      "next":  "chapter3_scene1_empathy_dialog"
+                  },
+                  {
+                      "id":  "chapter3_scene1_empathy_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "No digas eso…\nme pones nerviosa.",
+                      "next":  "chapter3_scene2_dialog1"
+                  },
+                  {
+                      "id":  "chapter3_scene1_caution",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu ladea la cabeza.",
+                      "next":  "chapter3_scene1_caution_dialog1"
+                  },
+                  {
+                      "id":  "chapter3_scene1_caution_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Claro que no, tontito.\nTú me importas mucho.",
+                      "next":  "chapter3_scene1_caution_dialog2"
+                  },
+                  {
+                      "id":  "chapter3_scene1_caution_dialog2",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Nunca te haría daño.",
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "next":  "chapter3_scene2_dialog1"
+                  },
+                  {
+                      "id":  "chapter3_scene2_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon",   
+                      "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "text":  "Intentas moverte, tus manos atadas tras tu espalda se lastiman, empiezas a sangrar.",
+                      "next":  "chapter3_scene2_dialog2"
+                  },
+                  {
+                      "id":  "chapter3_scene2_dialog2",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Nadie te está haciendo daño.\nYo te cuido.",
+                      "next":  "chapter3_scene2_choice",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter3_scene2_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "displayName":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Te observa con intensidad.",
+                      "choices":  [
+                                      {
+                                          "text":  "Lo sé… se nota que te importa.",
+                                          "next":  "chapter3_scene2_empathy"
+                                      },
+                                      {
+                                          "text":  "Si te importara, me dejarías ir.",
+                                          "next":  "chapter3_scene2_caution"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter3_scene2_empathy",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu se emociona visiblemente.",
+                      "next":  "chapter3_scene2_empathy_dialog"
+                  },
+                  {
+                      "id":  "chapter3_scene2_empathy_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Exacto…\neso intento decirte.",
+                      "next":  "chapter3_scene2_food_choice"
+                  },
+                  {
+                      "id":  "chapter3_scene2_caution",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Un silencio largo.\nYazu baja la mirada.",
+                      "next":  "chapter3_scene2_caution_dialog1"
+                  },
+                  {
+                      "id":  "chapter3_scene2_caution_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "¿Irte… \npara qué?\n\nAquí estás a salvo.",
+                      "next":  "chapter3_scene2_caution_dialog2",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter3_scene2_caution_dialog2",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Aquí tienes todo lo que necesitas.",
+                      "next":  "chapter3_scene2_food_choice"
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_choice",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon",
+                      "text":  "no es necesario que te vayas, necesitas algo?\n Solo dime que quieres y te lo dare.",
+                      "next":  "chapter3_scene2_food_dialog"
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "¿Hambre? ¿Sed?\n¿Quieres ir al baño?",
+                      "next":  "chapter3_scene2_food_options"
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_options",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "yazumimoon se acerca a ti, te mira a los ojos, sonríe y espera tu respuesta.",
+                      "choices":  [
+                                      {
+                                          "text":  "Me gustaría comer algo… ¿y el baño? Por favor… gatita.",
+                                          "next":  "chapter3_scene2_food_empathy"
+                                      },
+                                      {
+                                          "text":  "¿intentas matarme de inanicion? ¿Puedo ir al baño al menos?",
+                                          "next":  "chapter3_scene2_food_caution"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_empathy",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu se queda inmóvil por un segundo.\n Luego asiente con rapidez, demasiado rápido.",
+                      "next":  "chapter3_scene2_food_empathy_dialog"
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_empathy_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Claro… claro que sí!.", 
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "next":  "chapter3_scene2_food_caution_dialog3"
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_caution",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "La sonrisa de Yazu se desvanece lentamente.",
+                      "next":  "chapter3_scene2_food_caution_dialog1",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_caution_dialog1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "No estás muriéndote…",
+                      "next":  "chapter3_scene2_food_caution_dialog2",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_caution_dialog2",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Solo estás exagerando un poquito.",
+                      "next":  "chapter3_scene2_food_caution_dialog3"
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_caution_dialog3",
+                      "type":  "dialog", 
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Yazu se percata de la sangre corriendo por tus ataduras.",
+                      "next":  "chapter3_scene2_food_caution_dialog12"
+                  },
+                  {
+                      "id":  "chapter3_scene2_food_caution_dialog12",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "…\n Eso no debería estar pasando.",
+                      "next":  "chapter3_scene2_unfasten_dialog"
+                  },
+                  {
+                      "id":  "chapter3_scene2_unfasten_dialog",
+                      "type":  "dialog", 
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Yazu revisa tus ataduras, tus manos estan moradas.\n",
+                      "next":  "chapter3_scene2_freedom_dialog",
+                      "effects":  {
+                                      "cameraShake":  true
+                                  }
+                  },
+                  {
+                      "id":  "chapter3_scene2_freedom_dialog",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Está bien…\nte desataré.",
+                      "next":  "chapter3_scene2_freedom_choice"
+                  },
+                  {
+                      "id":  "chapter3_scene2_freedom_choice",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu empieza a desatar tus manos, el alivio es inmediato.\n te levantas de la silla y te estiras.",
+                      "choices":  [
+                                      {
+                                          "text":  "Gracias… de verdad.",
+                                          "next":  "chapter3_scene2_ask_leave"
+                                      },
+                                      {
+                                          "text":  "Empujarla y correr.",
+                                          "next":  "chapter3_scene2_run_dialog"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter3_scene2_ask_leave",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  " Yazu sonríe con alivio.",
+                      "next":  "chapter3_scene2_ask_leave1"
+                  },
+                  {
+                      "id":  "chapter3_scene2_ask_leave1",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon",
+                      "text":  "Siempre dices cosas bonitas",
+                      "next":  "chapter3_scene2_ask_leave2"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog",
+                      "type":  "dialog", 
+                      "sprite":  "yazu cerrada.png", 
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "text":  "Yazumimoon cae al suelo\n corres tan rápido como puedes",
+                      "next":  "chapter3_scene2_run_dialog12"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog12",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon",
+                      "sprite":  "yazu cerrada.png",
+                      "text":  "Te vas a lastimar…",
+                      "next":  "chapter3_scene2_run_dialog2"
+                  },
+                   
+                  {
+                      "id":  "chapter3_scene2_run_dialog2",
+                      "type":  "dialog",  
+                      "background":  "assets/puerta.jpg",
+                      "text":  "haces oidos sordos, sales del sotano y navegas el interior de la casa.",
+                      
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "next":  "chapter3_scene2_run_dialog21"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog21",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "corres a la puerta principal\n Cerrada.", 
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "next":  "chapter3_scene2_run_dialog22"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog22",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "Golpeas el metal con el hombro.\n Un dolor seco te atraviesa el brazo.", 
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "next":  "chapter3_scene2_run_dialog23"
+                  },
+                   {
+                      "id":  "chapter3_scene2_run_dialog23",
+                      
+                      "background":  "assets/puerta.jpg",
+                      "type":  "dialog", 
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "text":  "la puerta del patio trasero\n Cerrada.",
+                      "next":  "chapter3_scene2_run_dialog24"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog24",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "Las ventanas.\nRejas internas.\n Vidrios gruesos.",
+                      "next":  "chapter3_scene2_run_dialog25"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog25",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "La pequeña puerta del perro.\nUn panel metálico soldado desde dentro.",
+                      "next":  "chapter3_scene2_run_dialog26"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog26",
+                      
+                      "background":  "assets/puerta.jpg",
+                      "type":  "dialog", 
+                                          "effects":  {
+                                      "cameraShake":  true
+                                  },
+                      "text":  "Tiras\n Pateas\n Golpeas\n Nada funciona.",
+                      "next":  "chapter3_scene2_run_dialog27"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog27",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "Lo sabes incluso antes de admitirlo:\nNo van a ceder.",
+                      "next":  "chapter3_scene2_run_dialog28"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog28",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "Te desplomas contra la pared, deslizándote hasta el suelo.",
+                      "next":  "chapter3_scene2_run_dialog29"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog29",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "Jadeas.\n El pecho te quema.\n La casa parece observarte en silencio.",
+                      "next":  "chapter3_scene2_run_dialog31"
+                  },
+                   {
+                      "id":  "chapter3_scene2_run_dialog31",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "Yazumimoon sigue abajo.\n Sentada en el mismo escalón, al pie de las escaleras.",
+                      "next":  "chapter3_scene2_run_dialog32"
+                  },
+                   {
+                      "id":  "chapter3_scene2_run_dialog32",
+                      "type":  "dialog", 
+                      
+                      "background":  "assets/puerta.jpg",
+                      "text":  "No te persigue.\n No grita.\n No se levanta.",
+                      "next":  "chapter3_scene2_run_dialog33"
+                  },
+                   {
+                      "id":  "chapter3_scene2_run_dialog33",
+                      "type":  "dialog",
+                      
+                      "background":  "assets/puerta.jpg",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Te dije que te ibas a lastimar…",
+                      "next":  "chapter3_scene2_run_dialog34"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog34",
+                      "type":  "dialog", 
+                      "sprite":  "yazu cerrada.png",
+
+                      "background":  "assets/puerta.jpg",
+                      "text":  "Yazu camina de forma calmada por las escaleras del sotano, sale por la puerta y te mira",
+                      "next":  "chapter3_scene2_run_dialog35"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog35",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      
+                      "background":  "assets/puerta.jpg",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "Te aviso cuando la cena este lista, el baño esta ahi, sientete como en casa.",
+                      "next":  "chapter3_scene2_run_dialog36"
+                  },
+                  {
+                      "id":  "chapter3_scene2_run_dialog36",
+                      "type":  "dialog", 
+                      "background":  "assets/puerta.jpg",
+                      "text":  "La casa permanece cerrada.\n Tus salidas también.",
+                      "next":  "chapter3_route_choice"
+                  
+                  },
+                   {
+                      "id":  "chapter3_scene2_ask_leave1",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu empieza a desatar tus manos, el alivio es inmediato.",
+                      "choices":  [
+                                      {
+                                          "text":  "puedes dejarme ir? porfavor, gatita",
+                                          "next":  "chapter3_scene2_ask_leave11"
+                                      }
+                                  ]
+                  },
+                  {
+                      "id":  "chapter3_scene2_ask_leave11",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "sprite":  "yazu cerrada.png",
+                      "displayName":  "",
+                      "text":  "Yazu parpadea varias veces. \n No responde de inmediato.",
+                      "next":  "chapter3_scene2_ask_leave2"
+                  },
+                  {
+                      "id":  "chapter3_scene2_ask_leave2",
+                      "type":  "dialog",
+                      "speaker":  "YAZUMIMOON",
+                      "displayName":  "Yazumimoon", 
+                      "text":  "¿Irte…?",
+                      "next":  "chapter3_scene2_ask_leave3"
+                  }
+                    ,
+                    {
+                        "id":  "chapter3_scene2_ask_leave3",
+                        "type":  "dialog", 
+                        "sprite":  "yazu cerrada.png",
+                        "text":  "Da un paso hacia ti.",
+                        "next":  "chapter3_scene2_ask_leave4",
+                        "effects":  {
+                                        "spriteZoom": { "scale": 1.08, "duration": 800 }
+                                    }
+                  },
+                   {
+                        "id":  "chapter3_scene2_ask_leave4",
+                        "type":  "dialog",
+                        "speaker":  "YAZUMIMOON",
+                        "displayName":  "Yazumimoon", 
+                        "text":  " Pero… \ntodavía no has ido al baño.\n Ni has comido.",
+                        "next":  "chapter3_scene2_ask_leave5"
+                  },
+                   {
+                        "id":  "chapter3_scene2_ask_leave5",
+                        "type":  "dialog",
+                        "speaker":  "YAZUMIMOON",
+                        "displayName":  "Yazumimoon", 
+                        "text":  "Además…\ndijiste gatita…",
+                        "next":  "chapter3_scene2_ask_leave6"
+                  },
+                   {
+                        "id":  "chapter3_scene2_ask_leave6",
+                        "type":  "dialog", 
+                        "sprite":  "yazu cerrada.png",
+                        "text":  "Sonríe, visiblemente nerviosa.",
+                        "next":  "chapter3_scene2_ask_leave7"
+                  },
+                  {
+                        "id":  "chapter3_scene2_ask_leave7",
+                        "type":  "dialog",
+                        "speaker":  "YAZUMIMOON",
+                        "displayName":  "Yazumimoon", 
+                        "text":  "No tiene sentido irte con el estómago vacío",
+                        "next":  "chapter3_scene2_ask_leave8"
+                  },
+                  {
+                        "id":  "chapter3_scene2_ask_leave8",
+                        "type":  "dialog", 
+                        "sprite":  "yazu cerrada.png",
+                        "text":  "Yazu señala la cocina.",
+                        "next":  "chapter3_scene2_ask_leave9"
+                  },
+                  {
+                        "id":  "chapter3_scene2_ask_leave9",
+                        "type":  "dialog",
+                        "speaker":  "YAZUMIMOON",
+                        "displayName":  "Yazumimoon", 
+                        "text":  "Ven.\nSolo un momento.",
+                        "next":  "chapter3_scene2_ask_leave10"
+                  },
+                  {
+                        "id":  "chapter3_scene2_ask_leave10",
+                        "type":  "dialog", 
+                        "sprite":  "yazu cerrada.png",
+                        "text":  "Extiende la mano, sin tocarte aún.",
+                        "next":  "chapter3_scene2_ask_leave11"
+                  },
+                  {
+                        "id":  "chapter3_scene2_ask_leave11",
+                        "type":  "dialog",
+                        "speaker":  "YAZUMIMOON",
+                        "displayName":  "Yazumimoon", 
+                        "text":  "Después vemos eso, ¿sí?",
+                        "next":  "chapter3_scene2_ask_leave12"
+                  },
+                   {
+                      "id":  "chapter3_scene2_ask_leave12",
+                      "type":  "dialog",
+                      "speaker":  "",
+                      "displayName":  "",
+                      "text":  "Yazu termina de desatar tus manos,\n te levantas de la silla y te estiras.",
+                      "choices":  [
+                                      {
+                                          "text":  "Supongo que no haria daño comer algo...",
+                                          "next": "chapter3_route_choice"
+                                      }
+                                  ]
+                  },
+                  {
+  "id": "chapter3_route_choice",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "text": "Yazu te observa, esperando.\nEl silencio pesa.",
+  "choices": [
+    {
+      "text": "Acompañar a yazu y tomar la oportunidad para conocerla.",
+      "next": "chapter3_routeA_bathroom_1"
+    },
+    {
+      "text": "Seguir buscando un escape.",
+      "next": "chapter3_routeB_silent_return_1"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeA_bathroom_1",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "sprite": "yazu cerrada.png",
+  "text": "Yazumimoon sube primero las escaleras.\nNo te apura.",
+  "next": "chapter3_routeA_bathroom_2"
+},
+{
+  "id": "chapter3_routeA_bathroom_2",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Ven…\nestá por aquí.",
+  "next": "chapter3_routeA_bathroom_3"
+},
+{
+  "id": "chapter3_routeA_bathroom_3",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "text": "El baño es pequeño, limpio, sorprendentemente normal.\nToallas dobladas con cuidado.\nUn tapete suave.\nUn espejo con calcomanías discretas.",
+  "next": "chapter3_routeA_bathroom_4"
+},
+{
+  "id": "chapter3_routeA_bathroom_4",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "text": "No hay cámaras.\nNo hay cerraduras extra.",
+  "next": "chapter3_routeA_bathroom_5"
+},
+{
+  "id": "chapter3_routeA_bathroom_5",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No miro, lo prometo.",
+  "next": "chapter3_routeA_bathroom_6"
+},
+{
+  "id": "chapter3_routeA_bathroom_6",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Bueno…\nsolo un poquito.",
+  "next": "chapter3_routeA_bathroom_732"
+},
+{
+  "id": "chapter3_routeA_bathroom_732",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "sprite":"yazu cerrada.png",
+  "text": "Ríe suavemente.",
+   "choices": [
+    {
+      "text": "Reir con ella.",
+      "next": "chapter3_routeA_bathroom_1b"
+    },
+    {
+      "text": "Lanzar una mirada de preocupacion y incomodidad.",
+      "next": "chapter3_routeA_bathroom_2b"
+    }
+  ] 
+},
+{
+  "id": "chapter3_routeA_bathroom_1b",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Sabía que te haría reír… es lindo cuando sonríes, como si todo fuera normal… ¿verdad que estamos bien aquí?",
+  "next": "chapter3_routeA_bathroom_72"
+},
+{
+  "id": "chapter3_routeA_bathroom_2b",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Ups… ¿te incomodé? Jeje… siempre digo cosas raras… pero no me odies por eso, ¿sí?.",
+  "next": "chapter3_routeA_bathroom_2b1"
+},
+{
+  "id": "chapter3_routeA_bathroom_2b1",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "sprite":"yazu cerrada.png",
+  "text": "si me empezaras a odiar me pondria muy triste.",
+  "next": "chapter3_routeA_bathroom_72"
+},
+{
+  "id": "chapter3_routeA_bathroom_72",
+  "type": "dialog", 
+  "background": "assets/baño.jpeg",
+  "text": "Antes de que puedas contestar yazumimoon se va caminando por el pasillo",
+  "next": "chapter3_routeA_hallway_1"
+},
+{
+  "id": "chapter3_routeA_hallway_1",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "text": "Avanzan por el pasillo.\nFotos colgadas en la pared.",
+  "next": "chapter3_routeA_hallway_12"
+},
+{
+  "id": "chapter3_routeA_hallway_12",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "text": "Te detienes a ver una foto",
+  "next": "chapter3_routeA_hallway_23"
+},
+{
+  "id": "chapter3_routeA_hallway_23",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "text": "Yazumimoon más joven.\nSonriendo.\nAbrazando a una mujer mayor.\nUn hombre con uniforme.\nUna niña sosteniendo un gato negro.",
+  "next": "chapter3_routeA_hallway_34"
+},
+{
+  "id": "chapter3_routeA_hallway_34",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Mi familia.",
+  "next": "chapter3_routeA_hallway_4"
+},
+{
+  "id": "chapter3_routeA_hallway_4",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Ese gato se llamaba Miso.\nDormía conmigo todas las noches.",
+  "next": "chapter3_routeA_hallway_5"
+},
+{
+  "id": "chapter3_routeA_hallway_5",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Todavía lo extraño…",
+  "next": "chapter3_routeA_livingroom_21"
+},
+{
+  "id": "chapter3_routeA_livingroom_21",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "text": "Yazumimoon continúa caminando por el pasillo, sin decir nada mas.",
+  "next": "chapter3_routeA_hallway_3"
+},{
+  "id": "chapter3_routeA_hallway_3",
+  "type": "dialog", 
+                      "background":  "assets/pasillo.jpg",
+  "text": "Es obvio que algo le molesta",
+   "choices": [
+    {
+      "text": "Que paso con Miso?.",
+      "next": "chapter3_routeA_bathroom_1b2"
+    },
+    {
+      "text": "No decir nada y seguir caminando.",
+      "next": "chapter3_routeA_hallway_54" 
+    }
+  ] 
+},
+{
+  "id": "chapter3_routeA_bathroom_1b2",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "sprite":"yazu cerrada.png",
+  "text": "Yazu se detiene sin voltear a verte.",
+  "next": "chapter3_routeA_hallway_51"
+},
+{
+  "id": "chapter3_routeA_hallway_51",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Murió…",
+  "next": "chapter3_routeA_hallway_52"
+},
+{
+  "id": "chapter3_routeA_hallway_52",
+  "type": "dialog",
+                      "background":  "assets/pasillo.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "pero no importa, porque ahora estás tú. Tú puedes llenar ese Vacio",
+  "next": "chapter3_routeA_hallway_53"
+},
+{
+  "id": "chapter3_routeA_hallway_53",
+  "type": "dialog", 
+                      "background":  "assets/pasillo.jpg",
+  "text": "Eso no fue una pregunta...",
+  "next": "chapter3_routeA_hallway_54"
+},
+{
+  "id": "chapter3_routeA_hallway_54",
+  "type": "dialog", 
+                      "background":  "assets/pasillo.jpg",
+  "text": "Yazu continua caminando...",
+  "next": "chapter3_routeA_livingroom_1"
+},
+{
+  "id": "chapter3_routeA_livingroom_1",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "text": "La sala está llena de vida.\nConsolas conectadas.\nFiguras acomodadas con cuidado.\nMangas ordenados.\nVideojuegos usados.",
+  "next": "chapter3_routeA_livingroom_2"
+},
+{
+  "id": "chapter3_routeA_livingroom_1",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "text": "La sala está llena de vida.\n ",
+  "next": "chapter3_routeA_livingroom_12"
+},
+{
+  "id": "chapter3_routeA_livingroom_12",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "text": " Consolas conectadas.\nFiguras acomodadas con cuidado.\nMangas ordenados.\nVideojuegos usados.",
+  "next": "chapter3_routeA_livingroom_2"
+},
+{
+  "id": "chapter3_routeA_livingroom_2",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "¿Te gustan los videojuegos?\n¿El anime?\nDi que sí, por favor…",
+  "next": "chapter3_routeA_livingroom_3"
+},
+{
+  "id": "chapter3_routeA_livingroom_3",
+  "background": "assets/Sala.jpg",
+  "text": "¿Quieres sentarte?",
+  "type": "dialog",
+  "text": "Toma una figura y la limpia con el dedo.",
+  "next": "chapter3_routeA_livingroom_421"
+}, 
+{
+  "id": "chapter3_routeA_livingroom_421",
+  "background": "assets/Sala.jpg",
+  "text": "Es un sofá viejo pero cómodo.",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "¿Te gusta alguna?",
+  "next": "chapter3_routeA_bathroom_73"
+},
+
+{
+  "background": "assets/Sala.jpg",
+  "text": "El rincón de la sala tiene una luz tenue.",
+  "type": "dialog",
+  "sprite":"yazu cerrada.png",
+  "text": "yazu toma varias figuras y las presenta ante ti, esperando tu eleccion",
+   "choices": [
+    {
+      "text": "Elegir figura de anime y decir que te gusta.",
+      "next": "chapter3_routeA_livingroom_4"
+    },
+    {
+      "text": "Elegir figura de videojuego y decir que te gusta.",
+      "background": "assets/Sala.jpg",
+      "text": "Hay una mesa con tazas vacías."
+    },
+    {
+      "text": "Elegir figura de Pelicula y decir que te gusta.",
+      "next": "chapter3_routeA_livingroom_4"
+    }
+  ] 
+},
+{
+  "id": "chapter3_routeA_livingroom_4",
+  "background": "assets/Sala.jpg",
+  "text": "La televisión muestra estática.",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "AYY! que casualidad esa es mi favorita tambien!.",
+  "next": "chapter3_routeA_bedroom_12"
+},
+{
+  "id": "chapter3_routeA_bedroom_12",
+  "background": "assets/Sala.jpg",
+  "text": "Un poster cuelga torcido.",
+  "sprite":"yazu cerrada.png",
+  "text": "Que gran coincidencia...",
+   "choices": [
+    {
+      "text": "En serio? Genial!",
+      "next": "chapter3_routeA_livingroom_45"
+    },
+    {
+      "text": "[ponerla a prueba] Perdon me confundi, quise decir esa otra.(apuntas a una figura diferente)",
+      "background": "assets/Sala.jpg",
+      "text": "Hay un paquete sin abrir."
+    }
+  ] 
+},
+{
+  "id": "chapter3_routeA_livingroom_41",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+      "background": "assets/Sala.jpg",
+  "displayName": "Yazumimoon",
+  "text": "SI! yo tambien me equivoque, esa es mi favorita!\n (yazu apunta a la nueva figura que elegiste).",
+  "next": "chapter3_routeA_livingroom_42"
+},
+{
+  "id": "chapter3_routeA_livingroom_42",
+  "type": "dialog",
+      "background": "assets/Sala.jpg",
+  "sprite":"yazu cerrada.png",
+  "text": "...",
+  "next": "chapter3_routeA_livingroom_43"
+},
+{
+  "id": "chapter3_routeA_livingroom_43",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+      "background": "assets/Sala.jpg",
+  "displayName": "Yazumimoon",
+  "text": ".......",
+  "next": "chapter3_routeA_livingroom_424"
+},
+{
+  "id": "chapter3_routeA_livingroom_424",
+  "type": "dialog",
+      "background": "assets/Sala.jpg",
+  "sprite":"yazu cerrada.png",
+  "text": "Obviamente esta mintiendo...",
+  "next": "chapter3_routeA_livingroom_425"
+},
+{
+  "id": "chapter3_routeA_livingroom_425",
+  "type": "dialog",
+      "background": "assets/Sala.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Estoy tan feliz de que tengamos tanto en comun!",
+  "next": "chapter3_routeA_livingroom_44"
+},
+{
+  "id": "chapter3_routeA_livingroom_44",
+  "type": "dialog", 
+  "background": "assets/Sala.jpg",
+  "text": "Yazu deja las figuras en su lugar y camina hacia una habitacion al fondo de la sala.",
+  "next": "chapter3_routeA_bedroom_1"
+},
+{
+  "id": "chapter3_routeA_bedroom_1",
+  "type": "dialog",
+  "background": "assets/Cuarto.jpg",
+  "text": "La puerta está entreabierta.\nRopa doblada por colores.\nSuéteres suaves.\nUna cama con demasiados cojines.",
+  "next": "chapter3_routeA_bedroom_2"
+},
+{
+  "id": "chapter3_routeA_bedroom_2",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "Siempre quise compartir mi espacio con alguien…",
+  "next": "chapter3_routeA_bedroom_3"
+},
+{
+  "id": "chapter3_routeA_bedroom_3",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "¿Eso es malo…?\n.....\nMejor no respondas.",
+  "next": "chapter3_routeA_bedroom_4"
+},
+{
+  "id": "chapter3_routeA_bedroom_4",
+   "type": "dialog",
+  "sprite":"yazu cerrada.png",
+  "background": "assets/Cuarto.jpg",
+  "text": "Yazu te da la espalda... parece que se puso roja como tomate..",
+   "choices": [
+    {
+      "text": "Ey, no es malo, en realidad es algo lindo.",
+      "next": "chapter3_routeA_bedroom_4a"
+    },
+    {
+      "text": "Podemos irnos de tu cuarto... Porfavor...",
+      "next": "chapter3_routeA_bedroom_4b"
+    }
+  ] 
+},
+{
+  "id": "chapter3_routeA_bedroom_4a",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "Entonces ¿está bien?… \n estaba pensando que podrías usar mi cuarto para dormir. Yo me quedaré en el sofá, claro…",
+  "next": "chapter3_routeA_bedroom_4a1"
+},
+{
+  "id": "chapter3_routeA_bedroom_4a1",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "pero así sabré que estás aquí, cerca de mí.",
+  "next": "chapter3_routeA_bedroom_5"
+},
+{
+  "id": "chapter3_routeA_bedroom_4b",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "Oh… ¿quieres irte? Yo solo…",
+  "next": "chapter3_routeA_bedroom_4b1"
+},
+{
+  "id": "chapter3_routeA_bedroom_4b1",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "Estaba pensando que podrías usar mi cuarto para dormir. Yo me quedaría en el sofá, obviamente…",
+  "next": "chapter3_routeA_bedroom_4b2"
+},
+{
+  "id": "chapter3_routeA_bedroom_4b2",
+  "type": "dialog",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "No quería incomodarte… Solo… pensé que sería bonito que mi espacio no estuviera vacío.",
+  "next": "chapter3_routeA_bedroom_5"
+},
+{
+  "id": "chapter3_routeA_bedroom_5",
+   "type": "dialog",
+  "sprite":"yazu cerrada.png",
+  "background": "assets/Cuarto.jpg",
+  "text": "Yazu se encoje dentro de si misma, sera posible que este mostrando consideracion genuina por ti?",
+   "choices": [
+    {
+      "text": "Gracias Yazu, es muy considerado.",
+      "next": "chapter3_routeA_bedroom_5b"
+    },
+    {
+      "text": "Preferiria dormir en mi propio cuarto, en mi casa...",
+      "next": "chapter3_routeA_bedroom_5b"
+    }
+  ] 
+},
+{
+  "id": "chapter3_routeA_bedroom_5b",
+  "type": "dialog",
+  "sprite": "yazu cerrada.png",
+  "background": "assets/Cuarto.jpg",
+  "text": "Yazu te sonrie y continua hacia la cocina",
+  "next": "chapter3_routeA_bedroom_5b1"
+},
+{
+  "id": "chapter3_routeA_bedroom_5b1",
+  "type": "dialog", 
+  "background": "assets/Cuarto.jpg",
+  "text": "Antes de seguirla algo llama tu atencion.. \nes un pequeño peluche de gato en la cama, es exactamente igual a Miso, el gato que menciono antes.",
+  "next": "chapter3_routeA_bedroom_5b2"
+},
+{
+  "id": "chapter3_routeA_bedroom_5b2",
+  "type": "dialog", 
+  "background": "assets/Cuarto.jpg",
+  "text": "te acercas a mirarlo mas de cerca...",
+  "next": "chapter3_routeA_bedroom_5b3"
+},
+{
+  "id": "chapter3_routeA_bedroom_5b3",
+  "type": "dialog", 
+  "background": "assets/Cuarto.jpg",
+  "text": "...",
+  "next": "chapter3_routeA_bedroom_5b5"
+},
+{
+  "id": "chapter3_routeA_bedroom_5b5",
+  "type": "dialog", 
+  "background": "assets/Cuarto.jpg",
+  "text": "Esto no es un peluche...",
+  "next": "chapter3_routeA_bedroom_5b6"
+},
+{
+  "id": "chapter3_routeA_bedroom_5b6",
+  "type": "dialog", 
+  "sprite": "taxidermia.jpg",
+  "background": "assets/Cuarto.jpg",
+  "text": "Tomas la pieza de taxidermia en tus manos...",
+  "next": "chapter3_routeA_bedroom_5b8"
+}, 
+{
+  "id": "chapter3_routeA_bedroom_5b8",
+  "type": "dialog", 
+  "sprite": "taxidermia.jpg",
+  "background": "assets/Cuarto.jpg",
+  "text": "mientras inspeccionas el cadaver de gato momificado, escuchas la puerta del cuarto asotarse",
+  "effects":  {
+              "cameraShake":  true
+          },
+  "next": "chapter3_routeA_bedroom_5b9"
+},
+{
+  "id": "chapter3_routeA_bedroom_5b9",
+  "type": "dialog",  
+  "sprite": "yazu cerrada.png",
+  "background": "assets/Cuarto.jpg",
+  "text": "Yazu aparece a tu lado antes de que puedas reaccionar.\n en un segundo arranca el gato de tus manos y lo esconde, \nes tan rapida que tu cerebro no alcanza a procesar donde lo guardo.",
+  "effects":  {
+              "cameraShake":  true
+          },
+  "next": "chapter3_routeA_bedroom_5b10"
+},
+{
+  "id": "chapter3_routeA_bedroom_5b10",
+  "type": "dialog",  
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "background": "assets/Cuarto.jpg",
+  "text": "EY! no toques eso! ultima advertencia!",
+  "effects":  {
+              "cameraShake":  true
+          },
+  "next": "chapter3_routeA_bedroom_5b11"
+},
+{
+    "id": "chapter3_routeA_bedroom_5b11",
+    "type": "dialog",
+  "background": "assets/Cuarto.jpg",
+  "text": "Yazu frunce el ceño, sale agitada de la habitacion",
+    "next": "chapter3_routeA_bedroom_5b12"
+},
+{
+    "id": "chapter3_routeA_bedroom_5b12",
+    "type": "dialog",
+  "background": "assets/Cuarto.jpg",
+  "text": "Despues de tomarte un tiempo para procesar lo que acababa de pasar, decides seguirla",
+    "next": "chapter3_routeA_kitchen_1"
+},
+{
+    "id": "chapter3_routeA_kitchen_1",
+  "type": "dialog",
+  "background": "assets/Cocina.jpg",
+  "text": "llegas a la cocina donde yazu esta revisando la alacena",
+    "next": "chapter3_routeA_kitchen_12"
+},
+{
+  "id": "chapter3_routeA_kitchen_12",
+  "type": "dialog",
+  "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Voy a preparar algo rico.",
+  "next": "chapter3_routeA_kitchen_3"
+},
+
+{
+    "id": "chapter3_routeA_kitchen_3",
+    "type": "dialog",
+    "sprite": "yazu cerrada.png",
+    "background": "assets/Cocina.jpg",
+    "text": "Sera posible que haya olvidado todo su enojo en estos minutos? o es muy buena actuando...",
+    "next": "chapter3_kitchen_shared_1"
+},
+
+{
+  "id": "chapter3_routeB_silent_return_1",
+  "type": "dialog",
+      "background": "assets/pasillo.jpg",
+  "text": "Decides no seguirla.\nEsperas unos segundos.\nCuando ya no escuchas sus pasos, comienzas a moverte.",
+  "next": "chapter3_routeB_bathroom_1"
+},
+{
+  "id": "chapter3_routeB_bathroom_1",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "text": "El baño está impecable.\nDemasiado.",
+  "next": "chapter3_routeB_bathroom_2"
+},
+{
+  "id": "chapter3_routeB_bathroom_2",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "text": "Las toallas están dobladas con una precisión casi obsesiva.\nNo hay polvo.\nNo hay manchas.\nNada fuera de lugar.",
+  "next": "chapter3_routeB_bathroom_3"
+},
+{
+  "id": "chapter3_routeB_bathroom_3",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "sprites":"pastillas.png",
+  "text": "Abres el botiquín.\nMedicamentos para la ansiedad.\nPastillas para dormir.\nAlgunas vencidas.",
+  "effects":  {
+              "cameraShake":  true
+          },
+  "next": "chapter3_routeB_bathroom_4"
+} ,
+{
+  "id": "chapter3_routeB_bathroom_4",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+   "sprites":"pastillas.png",
+  "text": "No parecen ser automedicados... la receta debe estar en algun lugar de la casa...",
+  "next": "chapter3_routeB_bathroom_5"
+} ,
+{
+  "id": "chapter3_routeB_bathroom_5",
+  "type": "dialog",
+  "background": "assets/baño.jpeg",
+  "text": "sigues revisando el baño hasta asegurarte de no dejar nada.\n continuas al pasillo",
+  "next": "chapter3_routeB_hallway_1"
+} ,
+{
+  "id": "chapter3_routeB_hallway_1",
+  "type": "dialog",
+      "background": "assets/pasillo.jpg",
+  "text": "El pasillo está en silencio.\nLas fotografías están alineadas con cuidado.\nDemasiado cuidado.",
+  "next": "chapter3_routeB_hallway_2"
+},
+{
+  "id": "chapter3_routeB_hallway_2",
+  "type": "dialog",
+      "background": "assets/pasillo.jpg",
+  "text": "Reconoces a Yazu en casi todas.\nSiempre sonriendo.\nRodeada de personas que parecen quererla mucho.",
+  "next": "chapter3_routeB_hallway_3"
+},
+{
+  "id": "chapter3_routeB_hallway_3",
+  "type": "dialog",
+      "background": "assets/pasillo.jpg",
+  "text": "Te acercas a una de las fotos.\nEl marco tiene una pequeña etiqueta escrita a mano.\n\"Día perfecto\".",
+  "next": "chapter3_routeB_hallway_4"
+},
+{
+  "id": "chapter3_routeB_hallway_4",
+  "type": "dialog",
+      "background": "assets/pasillo.jpg",
+  "text": "En la parte trasera del marco hay otra anotación. \nMama:\"Solo buscas atencion\".\nNo hay fecha.\nSolo esa frase.",
+  "next": "chapter3_routeB_livingroom_1"
+},
+{
+  "id": "chapter3_routeB_livingroom_1",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "text": "La sala está ordenada.\nCada cosa parece estar exactamente donde debe.",
+  "next": "chapter3_routeB_livingroom_2"
+},
+{
+  "id": "chapter3_routeB_livingroom_2",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "text": "Las consolas están conectadas.\nLos controles limpios.\nComo si alguien esperara usarlos en cualquier momento.",
+  "next": "chapter3_routeB_livingroom_3"
+},
+{
+  "id": "chapter3_routeB_livingroom_3",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "text": "Las figuras están acomodadas con simetría.\nNo miran al sofá.\nMiran al centro de la habitación.\nA un punto exacto en el suelo.",
+  "next": "chapter3_routeB_livingroom_4"
+},
+{
+  "id": "chapter3_routeB_livingroom_4",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Debajo de la mesa hay una libreta.\nNo está escondida.\nSolo colocada fuera de vista.",
+  "next": "chapter3_routeB_livingroom_5"
+},
+{
+  "id": "chapter3_routeB_livingroom_5",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "terapia cognitivo-conductual.\nEstán fechadas.\nCada entrada comienza igual:\n\"Hoy me sentí…\"",
+  "next": "chapter3_routeB_livingroom_6"
+},
+{
+  "id": "chapter3_routeB_livingroom_6",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Algunas frases están subrayadas:\n\"Respirar antes de responder\"\n\"No asumir rechazo\"\n\"Recordar: no todos se van\"",
+  "next": "chapter3_routeB_livingroom_7"
+},
+{
+  "id": "chapter3_routeB_livingroom_7",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Pasas varias páginas.\nLas entradas son más largas.\nMás cuidadas.\nLa letra es firme.",
+  "next": "chapter3_routeB_livingroom_8"
+},
+{
+  "id": "chapter3_routeB_livingroom_8",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Algunas páginas incluyen ejercicios completos:\n\"Situación\"\n\"Pensamiento\"\n\"Respuesta alternativa\".\nTodos llenos.\nTodos terminan con una nota:\n\"Voy a estar bien\".",
+  "next": "chapter3_routeB_livingroom_9"
+},
+{
+  "id": "chapter3_routeB_livingroom_9",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Más adelante, los ejercicios quedan incompletos.\nAlgunas líneas se repiten.\nOtras están tachadas.\n\"Respirar antes de responder\" aparece varias veces.\nUna debajo de otra.",
+  "next": "chapter3_routeB_livingroom_10"
+},
+{
+  "id": "chapter3_routeB_livingroom_10",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Hay una página distinta.\nNo tiene fecha.\nSolo el encabezado:\n\"Fase 1: Detener el pensamiento\".",
+  "next": "chapter3_routeB_livingroom_11"
+},
+{
+  "id": "chapter3_routeB_livingroom_11",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "La siguiente entrada no sigue ningún formato.\nNo hay ejercicios.\nNo hay pasos.\nSolo frases separadas por líneas.",
+  "next": "chapter3_routeB_livingroom_12"
+  
+},
+{
+  "id": "chapter3_routeB_livingroom_12",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "\"No estoy exagerando.\"\n\"Esto sí importa.\"\n\"Si me duele tanto, es porque es real.\"",
+  "next": "chapter3_routeB_livingroom_13"
+}, 
+{
+  "id": "chapter3_routeB_livingroom_13",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Algunas frases están corregidas encima.\nComo si hubiera discutido consigo misma.\n\"No asumir abandono\" está tachado.\nDebajo, escrito más fuerte:\n\"Prepararse es mejor que confiar\".",
+  "next": "chapter3_routeB_livingroom_14"
+},
+{
+  "id": "chapter3_routeB_livingroom_14",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Varias páginas después hay un salto de fechas.\nSemanas.\nTal vez meses.",
+  "next": "chapter3_routeB_livingroom_15"
+},
+
+{
+  "id": "chapter3_routeB_livingroom_15",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Una nota: \"tercera vez que abandono terapia\".",
+  "next": "chapter3_routeB_livingroom_115"
+},
+{
+  "id": "chapter3_routeB_livingroom_115",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "\"Regla 1: No esperar a que el otro decida.\"\n\"Regla 2: Si alguien se siente bien conmigo, no es casualidad.\"",
+  "next": "chapter3_routeB_livingroom_16"
+},
+{
+  "id": "chapter3_routeB_livingroom_16",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "\"Regla 3: Si se va, es porque algo lo interrumpió.\"",
+  "next": "chapter3_routeB_livingroom_17"
+},
+{
+  "id": "chapter3_routeB_livingroom_17",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "una nota dice: \"porfin sali de ese internado mental\".",
+  "next": "chapter3_routeB_livingroom_117"
+},
+{
+  "id": "chapter3_routeB_livingroom_117",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Más adelante, la libreta deja de hablar de ella.\nEmpieza a hablar de alguien más.",
+  "next": "chapter3_routeB_livingroom_221"
+},
+{
+  "id": "chapter3_routeB_livingroom_221",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Una página está marcada con un doblez.\n\"Conocí a alguien\".",
+  "next": "chapter3_routeB_livingroom_222"
+},
+{
+  "id": "chapter3_routeB_livingroom_222",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "\"No fue gran cosa.\"\n\"Solo me habló normal.\"\n\"Pero no me miró como los demás.\"",
+  "next": "chapter3_routeB_livingroom_19"
+},
+{
+  "id": "chapter3_routeB_livingroom_19",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Entre mas lees menos duda te queda...",
+  "next": "chapter3_routeB_livingroom_20"
+},
+{
+  "id": "chapter3_routeB_livingroom_20",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "\"Recordó mi nombre.\"\n\"Eso no lo hace cualquiera.\"",
+  "next": "chapter3_routeB_livingroom_243"
+},
+
+{
+  "id": "chapter3_routeB_livingroom_243",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "La persona de la que habla en este diario...",
+  "next": "chapter3_routeB_livingroom_221"
+},
+{
+  "id": "chapter3_routeB_livingroom_221",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "eres tú.",
+  "effects":  {
+              "cameraShake":  true
+          },
+  "next": "chapter3_routeB_livingroom_232"
+},
+{
+  "id": "chapter3_routeB_livingroom_232",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Paginas y paginas detallandote a ti, \n tu rutina,\n tu apariencia.",
+  "effects":  {
+              "cameraShake":  true
+          },
+  "next": "chapter3_routeB_livingroom_22"
+},
+{
+  "id": "chapter3_routeB_livingroom_22",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "\"Si espero demasiado, alguien más ocupará mi lugar.\"",
+    "effects":  {
+              "cameraShake":  true
+          },
+  "next": "chapter3_routeB_livingroom_28"
+},
+{
+  "id": "chapter3_routeB_livingroom_28",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Las últimas páginas ya no tienen fechas.\nSolo planes incompletos.\nHorarios.\nRutas.\nMomentos en los que estarías solo.",
+  "next": "chapter3_routeB_livingroom_29"
+},
+{
+  "id": "chapter3_routeB_livingroom_29",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "Una frase se repite en distintos márgenes:\n\"Esto es cuidarlo\".",
+  "next": "chapter3_routeB_livingroom_31"
+}, 
+
+{
+  "id": "chapter3_routeB_livingroom_31",
+  "type": "dialog",
+  "sprite": "libreta.png",
+  "background": "assets/Sala.jpg",
+  "text": "la ultima pagina tiene la fecha de... del dia en que me secuestro...y algo mas...",
+  "next": "chapter3_routeB_livingroom_32"
+}, 
+{
+  "id": "chapter3_routeB_livingroom_32",
+  "type": "dialog",
+  "background": "assets/Sala.jpg",
+  "sprite": "fotolouie.png",
+  "effects":  {
+              "cameraShake":  true
+          },
+  "text": "soy yo...",
+  "next": "chapter3_routeB_livingroom_33"
+},
+{
+  "id": "chapter3_routeB_livingroom_33",
+  "type": "dialog",
+      "background": "assets/pasillo.jpg",
+  "text": "dejas todo donde lo encontraste y continuas buscando una salida.",
+  "next": "chapter3_routeB_bedroom_1"
+}, 
+{
+  "id": "chapter3_routeB_bedroom_1",
+  "type": "dialog",
+  "background": "assets/Cuarto.jpg",
+  "text": "La habitación está ordenada.\nDemasiado.\nLa cama hecha.\nLa ropa doblada.\nNada fuera de lugar.",
+  "next": "chapter3_routeB_bedroom_2"
+},
+{
+  "id": "chapter3_routeB_bedroom_2",
+  "type": "dialog",
+  "background": "assets/Cuarto.jpg",
+  "text": "Hay aroma a limpiador.\nAlgo suave.\nLavanda, tal vez.",
+  "next": "chapter3_routeB_bedroom_3"
+},
+{
+  "id": "chapter3_routeB_bedroom_3",
+  "type": "dialog",
+  "background": "assets/Cuarto.jpg",
+  "text": "empiezas a buscar por la habitacion, \nrevisas cada cajon, cada armario, \ncada espacio posible.",
+  "next": "chapter3_routeB_bedroom_4"
+},{
+  "id": "chapter3_routeB_bedroom_4",
+  "type": "dialog",
+  "sprite": "cajas.jpg",
+  "background": "assets/Cuarto.jpg",
+  "text": "Sobre una repisa hay varias cajas pequeñas.\nSeis en total. Todas del mismo tamaño.\nTodas alineadas con precisión.",
+  "next": "chapter3_routeB_bedroom_5"
+},
+{
+  "id": "chapter3_routeB_bedroom_5",
+  "background": "assets/Cuarto.jpg",
+  "sprite": "cajas.jpg", 
+  "text": "Cada caja tiene una marca discreta.\nUna fecha Y una letra escrita a mano.\nNada más.",
+  "next": "chapter3_routeB_bedroom_6"
+},
+{
+  "id": "chapter3_routeB_bedroom_6",
+  "background": "assets/Cuarto.jpg",
+  "text": "Cada caja tiene una marca discreta.\nUna fecha Y una letra escrita a mano.\nNada más.",
+  "sprite": "cajas.jpg",
+  "text": "La primera dice:\n\"2013 – M\".",
+  "next": "chapter3_routeB_bedroom_7"
+},
+{
+  "id": "chapter3_routeB_bedroom_7",
+  "background": "assets/Cuarto.jpg",
+  "text": "Hay una foto pegada dentro de una tapa.\nUn recuerdo.\nUna sonrisa que conoces.",
+  "sprite": "cajas.jpg",
+  "text": "Dentro hay una pulsera gastada.\nY una foto doblada.\nDos adolescentes sonriendo.\nUna de ellos es Yazu.",
+  "next": "chapter3_routeB_bedroom_8"
+},
+{
+  "id": "chapter3_routeB_bedroom_8",
+  "background": "assets/Cuarto.jpg",
+  "text": "Encuentras la letra de una canción.\nEstá subrayada en varios versos.",
+  "sprite": "cajas.jpg",
+  "text": "Al reverso de la foto:\n\"Decía que siempre estaríamos juntos.\"",
+  "next": "chapter3_routeB_bedroom_9"
+},
+{
+  "id": "chapter3_routeB_bedroom_9",
+  "background": "assets/Cuarto.jpg",
+  "text": "Hay una nota doblada.\nDentro pone:\n\"Piensa en mi cuando no pueda verte.\"",
+  "sprite": "cajas.jpg",
+  "text": "La siguiente caja:\n\"2016 – R\".",
+  "next": "chapter3_routeB_bedroom_10"
+},
+{
+  "id": "chapter3_routeB_bedroom_10",
+  "background": "assets/Cuarto.jpg",
+  "text": "En el fondo del cajon hay una llave.\nNo parece de esta casa.",
+  "sprite": "cajas.jpg",
+  "text": "Un boleto de cine.\nUn llavero sencillo.Un papel impreso:\n\"Gracias por escucharme.\"",
+  "next": "chapter3_routeB_bedroom_11"
+},
+{
+  "id": "chapter3_routeB_bedroom_11",
+  "background": "assets/Cuarto.jpg",
+  "text": "Al abrir un sobre encuentras un billete\ncon una dirección garabateada.",
+  "sprite": "cajas.jpg",
+  "text": "No hay nota final.",
+  "next": "chapter3_routeB_bedroom_12"
+},
+{
+  "id": "chapter3_routeB_bedroom_12",
+  "background": "assets/Cuarto.jpg",
+  "text": "No hay nota final.",
+  "sprite": "cajas.jpg",
+  "text": "La tercera caja dice:\n\"2019 – L\".",
+  "next": "chapter3_routeB_bedroom_13"
+},
+{
+  "id": "chapter3_routeB_bedroom_13",
+  "background": "assets/Cuarto.jpg",
+  "text": "La última página está rasgada.\nSolo queda esa mitad.",
+  "sprite": "cajas.jpg",
+  "text": "Dentro hay una sudadera doblada.\nAún conserva forma.\n Como si alguien hubiera prometido volver por ella.",
+  "next": "chapter3_routeB_bedroom_14"
+},
+{
+  "id": "chapter3_routeB_bedroom_14",
+  "background": "assets/Cuarto.jpg",
+  "text": "Un mensaje corto: \"No volveré\".",
+  "sprite": "cajas.jpg",
+  "text": "Las siguientes cajas son distintas.\nNo en tamaño.\nEn cuidado.",
+  "next": "chapter3_routeB_bedroom_15"
+},
+{
+  "id": "chapter3_routeB_bedroom_15",
+  "background": "assets/Cuarto.jpg",
+  "text": "Hay una nota para ti.\nLa letra es conocida.",
+  "sprite": "cajas.jpg",
+  "text": "La cuarta caja:\n\"2021 – J\".\nEl cartón está reforzado.\nEl interior forrado con tela suave.",
+  "next": "chapter3_routeB_bedroom_16"
+},
+{
+  "id": "chapter3_routeB_bedroom_16",
+  "background": "assets/Cuarto.jpg",
+  "text": "En el margen hay un mapa.\nMarcas con cruces.",
+  "sprite": "cajas.jpg",
+  "text": "Dentro hay una billetera.\nVacía.\nUna copia de una llave.\nY una hoja con horarios escritos a lápiz.",
+  "next": "chapter3_routeB_bedroom_17"
+},
+{
+  "id": "chapter3_routeB_bedroom_17",
+  "background": "assets/Cuarto.jpg",
+  "text": "Algunas cajas contienen cartas antiguas.",
+  "sprite": "cajas.jpg",
+  "text": "No hay mensajes.",
+  "next": "chapter3_routeB_bedroom_18"
+},
+{
+  "id": "chapter3_routeB_bedroom_18",
+  "background": "assets/Cuarto.jpg",
+  "text": "Una nota final dice: \"cuida de mi\".",
+  "sprite": "cajas.jpg",
+  "text": "La quinta caja:\n\"2022 – D\".\nEstá mejor conservada que las demás.",
+  "next": "chapter3_routeB_bedroom_19"
+},
+{
+  "id": "chapter3_routeB_bedroom_19",
+  "background": "assets/Cuarto.jpg",
+  "text": "Encuentras un plano con horarios anotados.",
+  "sprite": "cajas.jpg",
+  "text": "Dentro hay un reloj.\nUn celular antiguo sin batería.\nY una nota corta:\n\"Aquí estaba a salvo.\"",
+  "next": "chapter3_routeB_bedroom_21"
+}, 
+{
+  "id": "chapter3_routeB_bedroom_21",
+  "background": "assets/Cuarto.jpg",
+  "text": "Hay una lista de nombres tachados.",
+  "sprite": "cajas.jpg",
+  "effects": {
+    "cameraShake": true
+  },
+  "text": "La última caja no tiene fecha.\nNo tiene letra.",
+ 
+  "next": "chapter3_routeB_bedroom_22"
+},
+   {
+"background": "assets/Cuarto.jpg",
+    "text": "Una caja marcada con tu inicial.",
+
+  "sprite": "cajas.jpg",
+  "id": "chapter3_routeB_bedroom_22",
+  "type": "dialog",
+  
+      "background": "assets/Cuarto.jpg",
+  "effects": {
+    "cameraShake": true
+  },
+  "text": "Está vacía.\nDemasiado limpia.\nComo si hubiera sido preparada con anticipación.",
+  "next": "chapter3_routeB_bedroom_23"
+    },{
+         "background": "assets/Cuarto.jpg",
+    "text": "Dentro hay una pulsera con una nota.",
+
+  "sprite": "cajas.jpg",
+  "id": "chapter3_routeB_bedroom_23",
+  "type": "dialog",
+      "background": "assets/Cuarto.jpg",
+  "text": "Cierras la caja.\nLa colocas exactamente donde estaba.",
+  
+  "next": "chapter3_routeB_bedroom_24"
+},
+{
+  "id": "chapter3_routeB_bedroom_24",
+  "background": "assets/Cuarto.jpg",
+  "text": "La nota dice: \"no lo olvides\".",
+  "text": "bajas a la cocina antes de que Yazu venga a buscarte",
+  
+  "next": "chapter3_routeB_kitchen_1"
+},
+{
+  "id": "chapter3_routeB_kitchen_1",
+  "background": "assets/Cuarto.jpg",
+  "text": "Cierras la caja y la llevas contigo.",
+  "background": "assets/Cocina.jpg",
+  "text": "Llegas a la cocina.\nYazu ya está ahí.\nTe mira.",
+  "next": "chapter3_routeB_kitchen_2"
+},
+{
+  "id": "chapter3_routeB_kitchen_2",
+  "type": "dialog",
+  "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "No dice nada.\nPero su expresión cambió.",
+  "next": "chapter3_routeB_kitchen_3"
+},
+{
+  "id": "chapter3_routeB_kitchen_3",
+  "type": "dialog",
+  "background": "assets/Cocina.jpg",
+  "text": "Sabe que estuviste investigando.\nNo necesitas decirlo.",
+  "next": "chapter3_routeB_kitchen_4"
+},
+{
+  "id": "chapter3_routeB_kitchen_4",
+  "type": "dialog",
+  "background": "assets/Cocina.jpg",
+  "text": "El silencio se vuelve incómodo.\nDenso.",
+  "next": "chapter3_routeA_kitchen_12"
+},
+{
+  "id": "chapter3_kitchen_shared_1",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Yazumimoon se mueve por la cocina con naturalidad.\nComo si nada hubiera pasado.\nComo si este fuera un día normal.",
+  "next": "chapter3_kitchen_shared_2"
+},
+{
+  "id": "chapter3_kitchen_shared_2",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "El sonido de los utensilios.\nEl fuego bajo.\nEl olor empieza a llenar el lugar.",
+  "next": "chapter3_kitchen_shared_choice"
+},
+{
+  "id": "chapter3_kitchen_shared_choice",
+      "background": "assets/Cocina.jpg",
+  "type": "choice",
+  "choices": [
+    {
+      "text": "Quedarte y confiar.",
+      "next": "chapter3_routeA_dinner_1"
+    },
+    {
+      "text": "Observar en silencio.",
+      "next": "chapter3_routeB_escape_1"
+    },
+    {
+      "text": "Hablar sabiendo exactamente qué decir.",
+      "next": "chapter3_routeD_control_1" 
+    }
+  ]
+},
+               {
+  "id": "chapter3_routeA_dinner_1",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Te sientas.\nElla sirve los platos con cuidado.\nDemasiado cuidado.",
+  "next": "chapter3_routeA_dinner_2"
+},
+{
+  "id": "chapter3_routeA_dinner_2",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Siempre me gusta cocinar para alguien.\nHace que todo se sienta... real.",
+  "next": "chapter3_routeA_dinner_3"
+},
+{
+  "id": "chapter3_routeA_dinner_3",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "La comida es buena.\nCasera.\nReconfortante.",
+  "next": "chapter3_routeA_dinner_4"
+},
+{
+  "id": "chapter3_routeA_dinner_4",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No suelo tener visitas.\nLa gente dice que soy intensa.",
+  "next": "chapter3_routeA_dinner_5"
+},
+{
+  "id": "chapter3_routeA_dinner_5",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "No lo dice con rencor.\nLo dice como un hecho.",
+  "next": "chapter3_routeA_dinner_6"
+},
+{
+  "id": "chapter3_routeA_dinner_6",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "A veces...\ncuando alguien se va...\nno lo entiendo.",
+  "next": "chapter3_routeA_dinner_7"
+},
+{
+  "id": "chapter3_routeA_dinner_7",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Pienso que si se hubieran quedado un poco más...\ntodo habría estado bien.",
+  "next": "chapter3_routeA_dinner_8"
+},
+{
+  "id": "chapter3_routeA_dinner_8",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Se da cuenta de lo que acaba de decir.",
+  "next": "chapter3_routeA_dinner_9"
+},
+{
+  "id": "chapter3_routeA_dinner_9",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Pero no importa.\nOlvídalo.\nSuena horrible.",
+  "next": "chapter3_routeA_dinner_10"
+},
+{
+  "id": "chapter3_routeA_dinner_10",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Puedes ver el miedo.\nNo a ti.\nAl abandono.",
+  "next": "chapter3_routeA_dinner_choice"
+},
+{
+  "id": "chapter3_routeA_dinner_choice",
+      "background": "assets/Cocina.jpg",
+  "type": "choice",
+  "choices": [
+    {
+      "text": "No suena horrible. Suena solitario.",
+      "next": "chapter3_routeA_dinner_11"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeA_dinner_11",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "effects": {
+    "cameraShake": true
+  },
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "…",
+  "next": "chapter3_routeA_dinner_12"
+},
+{
+  "id": "chapter3_routeA_dinner_12",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Solitario…\nNunca pensé que alguien lo diría así.",
+  "next": "chapter3_routeA_dinner_13"
+},
+{
+  "id": "chapter3_routeA_dinner_13",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Siempre dicen que exagero.\nQue pienso demasiado.\nQue debería dejar ir.",
+  "next": "chapter3_routeA_dinner_14"
+},
+{
+  "id": "chapter3_routeA_dinner_14",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "—A veces dejar ir no es tan fácil.",
+  "next": "chapter3_routeA_dinner_15"
+},
+{
+  "id": "chapter3_routeA_dinner_15",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "¿Verdad?\nEs como si todos supieran cómo hacerlo.\nMenos yo.",
+  "next": "chapter3_routeA_dinner_16"
+},
+{
+  "id": "chapter3_routeA_dinner_16",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Te mira.\nNo con intensidad.\nCon alivio.",
+  "next": "chapter3_routeA_dinner_17"
+},
+{
+  "id": "chapter3_routeA_dinner_17",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Gracias por quedarte.\nLa mayoría se va cuando empiezo a hablar.",
+  "next": "chapter3_routeA_dinner_18"
+},
+{
+  "id": "chapter3_routeA_dinner_18",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "La cena continúa.\nYazu habla con entusiasmo, como si cada palabra fuera una oportunidad para acercarse más.",
+  "next": "chapter3_routeA_dinner_19"
+},
+{
+  "id": "chapter3_routeA_dinner_19",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "¿Sabes? A veces imagino que todo esto es un sueño… uno donde no tengo que fingir que estoy bien.",
+  "next": "chapter3_routeA_dinner_20"
+},
+{
+  "id": "chapter3_routeA_dinner_20",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Contigo… puedo ser yo. Aunque eso signifique ser rara, intensa, o demasiado pegajosa.",
+  "next": "chapter3_routeA_dinner_21"
+},
+{
+  "id": "chapter3_routeA_dinner_21",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "La conversación se vuelve íntima.\nNo hay tensión, solo una extraña paz.\nComo si algo roto dentro de ella se hubiera acomodado.",
+  "next": "chapter3_routeA_dinner_22"
+},
+{
+  "id": "chapter3_routeA_dinner_22",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No quiero que te vayas…\npero no te voy a obligar.\nSolo quiero que sepas que si te quedas…\nserás mío.\nNo como una cosa.\nSino como algo que me completa.",
+  "next": "chapter3_routeA_dinner_choice_2"
+},
+{
+  "id": "chapter3_routeA_dinner_choice_2",
+  "type": "choice",
+      "background": "assets/Cocina.jpg",
+  "choices": [
+    {
+      "text": "Me quedaré.",
+      "next": "chapter3_routeA_dinner_23"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeA_dinner_23",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "effects": {
+    "cameraShake": true
+  },
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "…\n¿De verdad?",
+  "next": "chapter3_routeA_dinner_24"
+},
+{
+  "id": "chapter3_routeA_dinner_24",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Lo prometo.\nNo te voy a lastimar.\nNunca.",
+  "next": "chapter3_routeA_dinner_25"
+},
+{
+  "id": "chapter3_routeA_dinner_25",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Los días pasan.\nNo como una prisión.\nSino como una rutina compartida.",
+  "next": "chapter3_routeA_dinner_26"
+},
+{
+  "id": "chapter3_routeA_dinner_28",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Eres el único que no se fue.\nEso dice mucho de ti.",
+  "next": "chapter3_routeA_dinner_29"
+},
+{
+  "id": "chapter3_routeA_dinner_31",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Un día menciona a alguien nuevo.\nSolo de pasada.",
+  "next": "chapter3_routeA_dinner_32"
+},
+{
+  "id": "chapter3_routeA_dinner_32",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Me recordó un poco a ti.\nCuando te conocí.",
+  "next": "chapter3_routeA_dinner_33"
+},
+{
+  "id": "chapter3_routeA_dinner_33",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "El tiempo deja de sentirse como algo que avanza.\nSe vuelve algo que simplemente… ocurre.",
+  "next": "chapter3_routeA_dinner_34"
+},
+{
+  "id": "chapter3_routeA_dinner_34",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "La casa ya no se siente ajena.\nConoces los sonidos.\nLos horarios.\nLos silencios.",
+  "next": "chapter3_routeA_dinner_35"
+},
+{
+  "id": "chapter3_routeA_dinner_35",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Ya no preguntas cuándo te irás.\nLa pregunta dejó de tener sentido.",
+  "next": "chapter3_routeA_dinner_36"
+},
+{
+  "id": "chapter3_routeA_dinner_36",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Yazu no te llama por tu nombre.\nNo porque lo haya olvidado.\nSino porque no lo necesita.",
+  "next": "chapter3_routeA_dinner_37"
+},
+{
+  "id": "chapter3_routeA_dinner_37",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Duermes donde te dicen.\nComes cuando te dicen.\nSonríes cuando ella parece tranquila.",
+  "next": "chapter3_routeA_dinner_38"
+},
+{
+  "id": "chapter3_routeA_dinner_38",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "No eres su pareja.\nNo eres su amigo.\nEres algo que se queda.",
+  "next": "chapter3_routeA_dinner_39"
+},
+{
+  "id": "chapter3_routeA_dinner_39",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "A veces te acaricia el cabello.\nNo con afecto.\nCon costumbre.",
+  "next": "chapter3_routeA_dinner_40"
+},
+{
+  "id": "chapter3_routeA_dinner_40",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Te dices que eres feliz.\nY lo repites hasta que deja de sonar falso.",
+  "next": "chapter3_routeA_dinner_41"
+},
+{
+  "id": "chapter3_routeA_dinner_41",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "El mundo exterior se vuelve borroso.\nNo porque no exista.\nSino porque ya no lo necesitas.",
+  "next": "chapter3_routeA_dinner_42"
+},
+{
+  "id": "chapter3_routeA_dinner_42",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "No te escapaste.\nNo te rescataron.\nTe quedaste.",
+  "next": "chapter3_routeA_dinner_end"
+},
+{
+  "id": "chapter3_routeA_dinner_end",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "FIN — RUTA A\n\nLa nueva mascota de yazu.",
+  "next":null
+},
+
+{
+  "id": "chapter3_routeA_dinner_29",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Empiezas a notar pequeños cambios.\nMenos preguntas.\nMenos miradas largas.",
+  "next": "chapter3_routeA_dinner_30"
+},
+{
+  "id": "chapter3_routeA_dinner_30",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Yazu sigue siendo amable.\nPero ya no necesita convencerte.",
+  "next": "chapter3_routeA_dinner_31"
+},
+
+{
+  "id": "chapter3_routeA_dinner_26",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Duermes en una habitación normal.\nComen juntos.\nRíen a veces.",
+  "next": "chapter3_routeA_dinner_27"
+},
+{
+  "id": "chapter3_routeA_dinner_27",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Afuera… ya no importa tanto.",
+  "next": "chapter3_routeA_dinner_28"
+},
+
+{
+  "id": "chapter3_routeB_escape_1",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Yazu cocina.\nTararea algo bajo.\nSe mueve cómoda en su propio espacio.",
+  "next": "chapter3_routeB_escape_2"
+},
+{
+  "id": "chapter3_routeB_escape_2",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Tú observas.\nDónde deja las cosas.\nQué frascos abre.\nCuáles evita.",
+  "next": "chapter3_routeB_escape_4"
+},
+{
+  "id": "chapter3_routeB_escape_4",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Coloca dos vasos en la mesa.\nLos alinea.\nSimétricos.\nPerfectos.",
+  "next": "chapter3_routeB_escape_5"
+},
+{
+  "id": "chapter3_routeB_escape_5",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Te levantas despacio.\n—¿Quieres que sirva las bebidas?\nLo dices con suavidad.\nComo alguien que quiere ayudar.",
+  "next": "chapter3_routeB_escape_6"
+},
+{
+  "id": "chapter3_routeB_escape_6",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "¿En serio?\n¡Sí! Gracias.\nEso es muy dulce de tu parte.",
+  "next": "chapter3_routeB_escape_7"
+},
+{
+  "id": "chapter3_routeB_escape_7",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Algo en tu pecho se retuerce.\nComo quitarle un dulce a un niño.\nPero sigues.",
+  "next": "chapter3_routeB_escape_8"
+},
+{
+  "id": "chapter3_routeB_escape_8",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Sacas las pastillas.\nLas que encontraste en el baño.\nSabes la dosis.\nSabes que es demasiada.\nLas disuelves.\nRemueves.\nNo miras atrás.",
+  "next": "chapter3_routeB_escape_9"
+},
+{
+  "id": "chapter3_routeB_escape_9",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Sirves las bebidas.\nTe sientas.\nActúas como si nada hubiera pasado.",
+  "next": "chapter3_routeB_escape_10"
+},{
+  "id": "chapter3_routeB_escape_10",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "¿Te gusta?\nIntenté que no fuera nada muy pesado.",
+  "next": "chapter3_routeB_escape_11"
+},
+{
+  "id": "chapter3_routeB_escape_11",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "—Está bien.\nGracias por cocinar.",
+  "next": "chapter3_routeB_escape_12"
+},
+{
+  "id": "chapter3_routeB_escape_12",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Me gusta hacerlo.\nCuando cocino siento que todo está…\nordenado.",
+  "next": "chapter3_routeB_escape_13"
+},
+{
+  "id": "chapter3_routeB_escape_13",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "—¿Ordenado?",
+  "next": "chapter3_routeB_escape_14"
+},
+{
+  "id": "chapter3_routeB_escape_14",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Sí.\nComo si nada pudiera salirse de control.\nAunque sea por un rato.",
+  "next": "chapter3_routeB_escape_15"
+},
+{
+  "id": "chapter3_routeB_escape_15",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Toma un sorbo.\nSus ojos tardan un segundo de más en enfocarte.",
+  "next": "chapter3_routeB_escape_16"
+},
+{
+  "id": "chapter3_routeB_escape_16",
+  "type": "choice",
+      "background": "assets/Cocina.jpg",
+  "choices": [
+    {
+      "text": "—Vi tus cuadernos.\nLos de la terapia.",
+      "next": "chapter3_routeB_escape_17A"
+    },
+    {
+      "text": "—Tienes muchos cuadernos.\n¿Te ayudan de verdad?",
+      "next": "chapter3_routeB_escape_17B"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeB_escape_17A",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Ah…\nNo pensaba que los encontrarías.",
+  "next": "chapter3_routeB_escape_18"
+},
+{
+  "id": "chapter3_routeB_escape_17B",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "A veces.\nOtras solo sirven para que el día pase.",
+  "next": "chapter3_routeB_escape_18"
+},
+{
+  "id": "chapter3_routeB_escape_18",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Bebe otro sorbo.\nParpadea lento.\nDemasiado lento.",
+  "next": "chapter3_routeB_escape_19"
+},
+{
+  "id": "chapter3_routeB_escape_19",
+  "type": "choice",
+      "background": "assets/Cocina.jpg",
+  "choices": [
+    {
+      "text": "—Hay fechas que faltan.\nComo si lo hubieras dejado.",
+      "next": "chapter3_routeB_escape_20A"
+    },
+    {
+      "text": "—Algunas páginas están vacías.\nEso no parece un ejercicio.",
+      "next": "chapter3_routeB_escape_20B"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeB_escape_20A",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No lo dejé.\nSolo…\nhubo cosas más urgentes.",
+  "next": "chapter3_routeB_escape_21"
+},
+{
+  "id": "chapter3_routeB_escape_20B",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Hay días en los que escribir empeora todo.",
+  "next": "chapter3_routeB_escape_21"
+},
+{
+  "id": "chapter3_routeB_escape_21",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Aprieta el vaso.\nLuego lo suelta.\nHace ruido contra la mesa.",
+  "next": "chapter3_routeB_escape_25"
+},
+{
+  "id": "chapter3_routeB_escape_25",
+  "type": "choice",
+      "background": "assets/Cocina.jpg",
+  "choices": [
+    {
+      "text": "—¿Estás bien?\nTe ves cansada.",
+      "next": "chapter3_routeB_escape_26A"
+    },
+    {
+      "text": "—Tal vez deberías sentarte.",
+      "next": "chapter3_routeB_escape_26B"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeB_escape_26A",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Solo un poco mareada.\nNada grave.",
+  "next": "chapter3_routeB_escape_27"
+},
+{
+  "id": "chapter3_routeB_escape_26B",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Sí…\nsolo un segundo.",
+  "next": "chapter3_routeB_escape_27"
+},
+{
+  "id": "chapter3_routeB_escape_27",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Su mano resbala del vaso.\nEl líquido se derrama.",
+  "next": "chapter3_routeB_escape_28"
+},
+{
+  "id": "chapter3_routeB_escape_28",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No pasa nada…\nQuédate…",
+  "next": "chapter3_routeB_escape_29"
+},
+{
+  "id": "chapter3_routeB_escape_29",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Su cabeza cae lentamente sobre la mesa.\nNo vuelve a moverse.",
+  "next": "chapter3_routeB_escape_30"
+},
+{
+  "id": "chapter3_routeB_escape_30",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Te levantas despacio.\nEl corazón te late en los oídos.",
+  "next": "chapter3_routeB_escape_31"
+},
+{
+  "id": "chapter3_routeB_escape_31",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "Das un paso atrás.\nLuego otro.\nElla no se mueve.",
+  "next": "chapter3_routeB_escape_32"
+},
+{
+  "id": "chapter3_routeB_escape_32",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "text": "Sacas la llave.",
+  "next": "chapter3_routeB_escape_33"
+},
+{
+  "id": "chapter3_routeB_escape_33",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "text": "La puerta principal está frente a ti.",
+  "next": "chapter3_routeB_escape_34"
+},
+{
+  "id": "chapter3_routeB_escape_34",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "effects": {
+    "cameraShake": true
+  },
+  "text": "Introduces la llave.\nGira.",
+  "next": "chapter3_routeB_escape_35"
+},
+{
+  "id": "chapter3_routeB_escape_35",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "text": "Funciona.",
+  "next": "chapter3_routeB_escape_36"
+},
+{
+  "id": "chapter3_routeB_escape_36",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "text": "Empujas la puerta.",
+  "next": "chapter3_routeB_escape_37"
+},
+{
+  "id": "chapter3_routeB_escape_37",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "El aire frío te golpea la cara.\nEl cielo.\nLa luz.",
+  "next": "chapter3_routeB_escape_38"
+},
+{
+  "id": "chapter3_routeB_escape_38",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "Sales corriendo.",
+  "next": "chapter3_routeB_escape_39"
+},
+{
+  "id": "chapter3_routeB_escape_39",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "No miras atrás.",
+  "next": "chapter3_routeB_escape_40"
+},
+{
+  "id": "chapter3_routeB_escape_40",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "El terreno es irregular.\nTierra.\nMadera vieja.",
+  "next": "chapter3_routeB_escape_41"
+},
+{
+  "id": "chapter3_routeB_escape_41",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "effects": {
+    "cameraShake": true
+  },
+  "text": "Algo se clava en tu pie.",
+  "next": "chapter3_routeB_escape_42"
+},
+{
+  "id": "chapter3_routeB_escape_42",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "Un clavo.",
+  "next": "chapter3_routeB_escape_43"
+},
+{
+  "id": "chapter3_routeB_escape_43",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "Pierdes el equilibrio.",
+  "next": "chapter3_routeB_escape_44"
+},
+{
+  "id": "chapter3_routeB_escape_44",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "Caes.",
+  "next": "chapter3_routeB_escape_45"
+},
+{
+  "id": "chapter3_routeB_escape_45",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "En un intento desesperado por amortiguar la caída, giras tu cabeza.",
+  "next": "chapter3_routeB_escape_46"
+},
+{
+  "id": "chapter3_routeB_escape_46",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "un segundo antes del impacto, ves la roca frente a ti.",
+  "next": "chapter3_routeB_escape_47"
+},
+{
+  "id": "chapter3_routeB_escape_47",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "grande, puntiaguda... manchada de rojo carmesi.",
+  "next": "chapter3_routeB_escape_48"
+},
+{
+  "id": "chapter3_routeB_escape_48",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "No eres el primero...",
+  "next": "chapter3_routeB_escape_49"
+},
+{
+  "id": "chapter3_routeB_escape_49",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "Ese es tu ultimo pensamiento consciente.",
+  "next": "chapter3_routeB_escape_54"
+},{
+  "id": "chapter3_routeB_escape_54",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "El cielo se vuelve borroso.",
+  "next": "chapter3_routeB_escape_55"
+},
+{
+  "id": "chapter3_routeB_escape_55",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "El frío ya no duele.",
+  "next": "chapter3_routeB_escape_58"
+},
+{
+  "id": "chapter3_routeB_escape_58",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "Todo se apaga.",
+  "next": "chapter3_routeB_escape_end"
+},
+{
+  "id": "chapter3_routeB_escape_end",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "FIN — RUTA B\n\nMorir libre."
+},
+{
+  "id": "chapter3_routeD_control_1",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "text": "No apartas la mirada.\nNo actúas sumiso.\nNo actúas hostil.\nActúas informado.",
+  "next": "chapter3_routeD_control_2"
+},
+{
+  "id": "chapter3_routeD_control_2",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "¿Te tomaste la dosis completa hoy… o la redujiste otra vez?",
+  "next": "chapter3_routeD_control_3"
+},
+{
+  "id": "chapter3_routeD_control_3",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "effects": { "cameraShake": true },
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "…¿Qué?",
+  "next": "chapter3_routeD_control_4"
+},
+{
+  "id": "chapter3_routeD_control_4",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "La azul no.\nLa blanca.\nLa que escondes detrás del jabón.",
+  "next": "chapter3_routeD_control_5"
+},
+{
+  "id": "chapter3_routeD_control_5",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No deberías…\nNo deberías haber visto eso.",
+  "next": "chapter3_routeD_control_62"
+},
+{
+  "id": "chapter3_routeD_control_62",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Terapia cognitivo-conductual.\nTres abandonos.\nUn internamiento.\nY una familia que dejó de contestar.",
+  "next": "chapter3_routeD_control_7"
+},
+{
+  "id": "chapter3_routeD_control_7",
+  "type": "choice",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "choices": [
+    {
+      "text": "Mencionar a su madre.",
+      "next": "chapter3_routeD_control_mother"
+    },
+    {
+      "text": "Mencionar las cajas.",
+      "next": "chapter3_routeD_control_boxes"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeD_control_mother",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Ella te decía que exagerabas.\nQue solo querías atención.",
+  "next": "chapter3_routeD_control_merge"
+},
+{
+  "id": "chapter3_routeD_control_boxes",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Las guardas por orden.\nComo recuerdos.\nComo trofeos.",
+  "next": "chapter3_routeD_control_merge"
+},
+{
+  "id": "chapter3_routeD_control_merge",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "¡Para!\nNo lo digas así…\nNo suena… no suena como yo lo pienso.",
+  "next": "chapter3_routeD_control_8"
+},
+{
+  "id": "chapter3_routeD_control_8",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Porque tú lo suavizas.\nYo no.",
+  "next": "chapter3_routeD_control_9"
+},
+{
+  "id": "chapter3_routeD_control_9",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "No soy tu mascota.\nNo soy tu compañía.\nSoy la prueba de que no puedes seguir fingiendo.",
+  "next": "chapter3_routeD_control_10"
+},
+{
+  "id": "chapter3_routeD_control_10",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "…si te vas…\nNo sé qué voy a hacer.",
+  "next": "chapter3_routeD_control_choice_2"
+},
+{
+  "id": "chapter3_routeD_control_choice_2",
+  "type": "choice",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "choices": [
+    {
+      "text": "Decirle qué va a pasar si nada cambia.",
+      "next": "chapter3_routeD_control_time"
+    },
+    {
+      "text": "Preguntarle cuánto tiempo cree que esto puede seguir.",
+      "next": "chapter3_routeD_control_time"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeD_control_time",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "¿Cuántas veces crees que puedes repetir lo mismo\nantes de que algo salga mal?",
+  "next": "chapter3_routeD_control_merge2"
+},
+{
+  "id": "chapter3_routeD_control_merge2",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Yo…\nNo quería que llegara a esto.",
+  "next": "chapter3_routeD_control_12"
+} ,
+{
+  "id": "chapter3_routeD_control_12",
+  "type": "choice",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "choices": [
+    {
+      "text": "Ya no me engañas con tu pequeño acto.",
+      "next": "chapter3_routeD_control_mask"
+    },
+    {
+      "text": "¿De verdad no ves el problema en haberme secuestrado?",
+      "next": "chapter3_routeD_control_mask"
+    }
+  ]
+},
+{
+  "id": "chapter3_routeD_control_mask",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No fue así.\nNo como lo dices.\nYo solo… intenté que no te fueras.",
+  "next": "chapter3_routeD_control_rationalize_1"
+},
+{
+  "id": "chapter3_routeD_control_rationalize_1",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "No te hice daño.\nTe cuidé.\nTe di comida.\nTe escuché.",
+  "next": "chapter3_routeD_control_rationalize_2"
+},
+{
+  "id": "chapter3_routeD_control_rationalize_2",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Las otras veces…\nCuando la gente se iba…\nSiempre era porque yo hacía algo mal.\nEsta vez quería hacerlo bien.",
+  "next": "chapter3_routeD_control_reply_1"
+},
+{
+  "id": "chapter3_routeD_control_reply_1",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Cerrar una puerta con alguien dentro no es cuidado.\nEs control.",
+  "next": "chapter3_routeD_control_reply_2"
+},
+{
+  "id": "chapter3_routeD_control_reply_2",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "No importa si cocinas.\nNo importa si escuchas..",
+  "next": "chapter3_routeD_control_reply_3"
+},
+{
+  "id": "chapter3_routeD_control_reply_3",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Si alguien no puede irse,\nno está eligiendo quedarse.",
+  "next": "chapter3_routeD_control_reply_4"
+},
+{
+  "id": "chapter3_routeD_control_reply_4",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Y lo sabes.\nPor eso lo escondes. \nPor eso guardas las cosas en cajas.",
+  "next": "chapter3_routeD_control_reply_5"
+},
+{
+  "id": "chapter3_routeD_control_reply_5",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "…",
+  "next": "chapter3_routeD_control_reply_6"
+},
+{
+  "id": "chapter3_routeD_control_reply_6",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Si abro la puerta…\nYa no hay vuelta atrás.",
+  "next": "chapter3_routeD_control_14"
+},
+{
+  "id": "chapter3_routeD_control_14",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Lo sé.\nPor eso sigue cerrada.",
+  "next": "chapter3_routeD_control_15"
+},
+{
+  "id": "chapter3_routeD_control_15",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "No porque me necesites.\nSino porque la necesitas tú.",
+  "next": "chapter3_routeD_control_16"
+},
+{
+  "id": "chapter3_routeD_control_16",
+  "type": "dialog",
+      "background": "assets/Cocina.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "…\nDime qué hago.",
+  "next": "chapter3_routeD_control_next"
+},
+{
+  "id": "chapter3_routeD_control_next",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Primero abres la puerta.\nNo para mí.\nPara ti.",
+  "next": "chapter3_routeD_control_17"
+},
+{
+  "id": "chapter3_routeD_control_17",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "Si lo hago…\n¿te vas?",
+  "next": "chapter3_routeD_control_18"
+},
+{
+  "id": "chapter3_routeD_control_18",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Sí.",
+  "next": "chapter3_routeD_control_19"
+},
+{
+  "id": "chapter3_routeD_control_19",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "speaker": "YAZUMIMOON",
+  "displayName": "Yazumimoon",
+  "text": "…",
+  "next": "chapter3_routeD_control_20"
+},
+{
+  "id": "chapter3_routeD_control_20",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "sprite": "yazu cerrada.png",
+  "text": "Yazu Camina hasta la puerta.\nNo corre.\nNo tiembla.\nSolo duda antes de girar la llave.",
+  "next": "chapter3_routeD_control_21"
+},
+{
+  "id": "chapter3_routeD_control_21",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "sprite": "yazu cerrada.png",
+  "effects": {
+    "cameraShake": true
+  },
+  "text": "El seguro cede.",
+  "next": "chapter3_routeD_control_22"
+},
+{
+  "id": "chapter3_routeD_control_22",
+  "type": "dialog",
+      "background": "assets/puerta.jpg",
+  "text": "La puerta queda entreabierta.\nLa casa cambia de sonido.\nDeja de ser un contenedor.",
+  "next": "chapter3_routeD_control_end"
+},
+{
+  "id": "chapter3_routeD_control_end",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "Sales.\nEl aire es distinto.\nNo porque sea mejor.\nSino porque ahora es tuyo.",
+"next":"chapter3_routeD_control_end1"
+},
+{
+  "id": "chapter3_routeD_control_end1",
+  "type": "dialog",
+      "background": "assets/patio.jpg",
+  "text": "FIN — RUTA D (FINAL VERDADERO)",
+"next":null
+}
+
+
+
+
+
+
+
+
+    ]
+}

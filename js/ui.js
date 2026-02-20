@@ -11,6 +11,21 @@ let openSpriteSrc = '';
 let closedSpriteSrc = '';
 let typingCompleteCallback = null;
 
+// Convert plain text into safe HTML (preserve newlines as <br>)
+function escapeHtml(s){
+  return String(s)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+function textToHTML(text){
+  if(text === null || text === undefined) return '';
+  return escapeHtml(text).replace(/\r\n|\r|\n/g,'<br>');
+}
+
 // Lightweight sprite preload cache to avoid repeated decoding during toggles
 const _spritePreloadCache = {};
 function _preloadSprite(src){
@@ -37,18 +52,35 @@ function _stopMouthLoop(){
 function setSprite(name){
   if(!name){ el.sprite.style.opacity = '0'; el.sprite.src = ''; return; }
   // prefer PNG assets first, then SVG fallback
-  el.sprite.style.opacity = '0';
-  el.sprite.onload = () => { el.sprite.style.opacity = '1'; el.sprite.onerror = null; };
-  el.sprite.onerror = () => {
-    try{
-      const src = el.sprite.src || '';
-      if(src.endsWith('.png')){ el.sprite.onerror = null; el.sprite.src = (window.REPO_BASE || './') + `assets/${name}.svg`; }
-      else { el.sprite.style.opacity = '0'; el.sprite.onerror = null; }
-    }catch(e){ el.sprite.style.opacity = '0'; el.sprite.onerror = null; }
-  };
   const repoBase = window.REPO_BASE || './';
-  if(name.includes('.')){ el.sprite.src = repoBase + `assets/${name}`; }
-  else { el.sprite.src = repoBase + `assets/${name}.png`; }
+  let spritePath = '';
+  if(name.includes('.')){ spritePath = repoBase + `assets/${name}`; }
+  else { spritePath = repoBase + `assets/${name}.png`; }
+  
+  // Preload in memory and show only when ready
+  const img = new Image();
+  img.onload = () => {
+    el.sprite.src = spritePath;
+    el.sprite.style.opacity = '1';
+  };
+  img.onerror = () => {
+    // Try SVG fallback if PNG failed
+    if(!name.includes('.') && spritePath.endsWith('.png')){
+      const svgPath = repoBase + `assets/${name}.svg`;
+      const img2 = new Image();
+      img2.onload = () => {
+        el.sprite.src = svgPath;
+        el.sprite.style.opacity = '1';
+      };
+      img2.onerror = () => {
+        el.sprite.style.opacity = '0';
+      };
+      img2.src = svgPath;
+    } else {
+      el.sprite.style.opacity = '0';
+    }
+  };
+  img.src = spritePath;
 }
 
 /**
@@ -92,7 +124,7 @@ function typeText(targetEl, text, speed = 18, onComplete, characterId, opts = {}
   if(!suppressVoice){
     // warm up images
     try{ _preloadSprite(openSpriteSrc); _preloadSprite(closedSpriteSrc); }catch(e){}
-    const toggleMs = 400; // lower frequency -> less repaint pressure
+    const toggleMs = 100; // fast mouth toggle for realistic speech animation
     let lastToggle = performance.now();
     const loop = (now) => {
       if(!mouthInterval) return; // stopped
@@ -100,7 +132,7 @@ function typeText(targetEl, text, speed = 18, onComplete, characterId, opts = {}
         mouthOpen = !mouthOpen;
         const targetSrc = mouthOpen ? openSpriteSrc : closedSpriteSrc;
         try{
-          if(targetSrc && (!el.sprite.src || el.sprite.src.indexOf(targetSrc) === -1)) el.sprite.src = targetSrc;
+          if(targetSrc && el.sprite.src !== targetSrc) el.sprite.src = targetSrc;
         }catch(e){}
         lastToggle = now;
       }
@@ -121,7 +153,14 @@ function typeText(targetEl, text, speed = 18, onComplete, characterId, opts = {}
       if(typingCompleteCallback){ try{ typingCompleteCallback(); }catch(e){} typingCompleteCallback = null; }
       return;
     }
-    targetEl.innerHTML += text[i++];
+    const ch = text[i++];
+    if(ch === '\r'){
+      // ignore carriage returns (handled by \n)
+    } else if(ch === '\n'){
+      targetEl.appendChild(document.createElement('br'));
+    } else {
+      targetEl.appendChild(document.createTextNode(ch));
+    }
     typingTimer = setTimeout(step, speed);
   })();
 }
@@ -132,7 +171,7 @@ function typeText(targetEl, text, speed = 18, onComplete, characterId, opts = {}
 function finishTyping(){
   if(!typing) return;
   clearTyping();
-  el.text.innerHTML = (nodeMap[currentId] && nodeMap[currentId].text) || '';
+  el.text.innerHTML = textToHTML((nodeMap[currentId] && nodeMap[currentId].text) || '');
   // stop mouth animation and set closed mouth
   if(mouthInterval) { _stopMouthLoop(); }
   mouthOpen = false;
@@ -280,7 +319,7 @@ function microPause(duration = 400, onComplete){
  */
 function showFlashback(targetEl, text, opacity = 1.0, onComplete, effects = {}){
   // Apply a distinct visual style so flashbacks read different from internal thought
-  targetEl.innerHTML = text;
+  targetEl.innerHTML = textToHTML(text);
   targetEl.style.opacity = String(opacity);
   // Slight desaturation + subtle glow to indicate memory
   targetEl.style.filter = effects.filter || 'grayscale(0.25) contrast(1.05)';
@@ -598,7 +637,7 @@ function voiceProgression(targetEl, texts = [], onComplete){
       return;
     }
     
-    targetEl.innerHTML = texts[index];
+    targetEl.innerHTML = textToHTML(texts[index]);
     targetEl.style.fontSize = sizes[Math.min(index, sizes.length - 1)];
     
     index++;

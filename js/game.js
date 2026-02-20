@@ -9,6 +9,72 @@ let gameStarted = false;
 let endPending = false;
 let currentSpriteName = '';
 
+// Route unlock system: track if player has seen endings of routes A and B
+let routesUnlocked = {
+  routeA: false,  // chapter3_routeA_dinner_end
+  routeB: false   // chapter3_routeB_escape_end
+};
+
+// Load persisted route unlock state
+function loadRouteUnlocks(){
+  try{
+    const saved = window.localStorage.getItem('vn_routes_unlocked');
+    if(saved){ const u = JSON.parse(saved); if(u && typeof u === 'object') routesUnlocked = u; }
+  }catch(e){}
+}
+
+// Save route unlock state
+function saveRouteUnlocks(){
+  try{
+    window.localStorage.setItem('vn_routes_unlocked', JSON.stringify(routesUnlocked));
+  }catch(e){}
+}
+
+/**
+ * Filtra las opciones basándose en condiciones de desbloqueo
+ * El nodo puede tener un campo "choice_unlock_conditions" que mapee índices a condiciones
+ * Ejemplo: { "2": "routeA && routeB" } desbloquea la opción 2 solo si ambas rutas están vistas
+ */
+function getAvailableChoices(node){
+  if(!Array.isArray(node.choices)) return [];
+  
+  // Special case: chapter3_kitchen_shared_choice
+  if(node.id === 'chapter3_kitchen_shared_choice'){
+    // Opción 2 (índice 2) se muestra solo si ambas rutas están desbloqueadas
+    return node.choices.filter((c, idx) => {
+      if(idx === 2){ // Tercera opción
+        return routesUnlocked.routeA && routesUnlocked.routeB;
+      }
+      return true;
+    });
+  }
+  
+  // Otherwise show all choices
+  return node.choices;
+}
+
+/**
+ * Actualiza la visibilidad del botón de salto a ruta D
+ */
+function updateRouteDBtnVisibility(){
+  const btn = document.getElementById('routeDJumpBtn');
+  if(btn){
+    btn.style.display = (routesUnlocked.routeA && routesUnlocked.routeB) ? 'inline-block' : 'none';
+  }
+}
+
+/**
+ * Salta directamente a la decisión de ruta D
+ */
+function jumpToRouteD(){
+  if(!routesUnlocked.routeA || !routesUnlocked.routeB){
+    alert('Debe completar las rutas A y B para acceder a la ruta D');
+    return;
+  }
+  historyStack = [];
+  goTo('chapter3_kitchen_shared_choice');
+}
+
 /**
  * Verifica si hay un nodo siguiente en el array
  * @param {string} id - ID del nodo actual
@@ -44,6 +110,18 @@ function renderNode(id){
   try{ window.localStorage.setItem('vn_last_node', String(currentId)); }catch(e){}
   try{ window.localStorage.setItem('vn_history', JSON.stringify(historyStack || [])); }catch(e){}
   
+  // Check if player has reached route endings and unlock
+  if(id === 'chapter3_routeA_dinner_end'){ 
+    routesUnlocked.routeA = true; 
+    saveRouteUnlocks();
+    updateRouteDBtnVisibility();
+  }
+  if(id === 'chapter3_routeB_escape_end'){ 
+    routesUnlocked.routeB = true; 
+    saveRouteUnlocks();
+    updateRouteDBtnVisibility();
+  }
+  
   // Reset text styling - remove any opacity filters
   el.text.style.opacity = '1';
   el.text.style.filter = '';
@@ -53,6 +131,24 @@ function renderNode(id){
   el.text.style.textShadow = '';
   
   const nodeType = node.type || 'dialog'; // default: dialog
+  
+  // Handle background: use node background if provided, otherwise show default
+  if(el.scene){
+    const repoBase = window.REPO_BASE || './';
+    if(node.background){
+      const bgPath = (node.background.includes('/') || node.background.includes('.'))
+        ? repoBase + node.background
+        : repoBase + `assets/${node.background}`;
+      // set CSS variable used by .scene::before
+      el.scene.style.setProperty('--scene-bg', `url('${bgPath}')`);
+      el.scene.dataset.scriptBackground = 'true';
+    } else {
+      // only set the default background when the script did not specify one
+      const defaultBg = repoBase + 'assets/creepy-horror-basement-ghost-bq7vqpkb7tasbpwt.png';
+      el.scene.style.setProperty('--scene-bg', `url('${defaultBg}')`);
+      el.scene.dataset.scriptBackground = 'false';
+    }
+  }
   
   // Generic effects for non-flashback/non-thought nodes (so dialog/narration can declare effects)
   if(nodeType !== 'thought' && nodeType !== 'flashback'){
@@ -89,9 +185,9 @@ function renderNode(id){
   if(nodeType === 'pause'){
     // Pausa: solo mostrar texto si existe, luego permitir click para continuar
     if(node.text){
-      el.text.textContent = node.text;
+      el.text.innerHTML = textToHTML(node.text);
     } else {
-      el.text.textContent = '';
+      el.text.innerHTML = '';
     }
     el.speaker.textContent = ''; // Clear speaker for pauses
     el.nextBtn.disabled = false;
@@ -105,7 +201,7 @@ function renderNode(id){
       minInterval: node.effects.parpadeo?.minInterval || 200,
       maxInterval: node.effects.parpadeo?.maxInterval || 600
     });
-    el.text.textContent = '';
+    el.text.innerHTML = '';
     el.nextBtn.disabled = false;
     return;
   }
@@ -150,19 +246,19 @@ function renderNode(id){
   // Handle different node types
   if(nodeType === 'dice'){
     // Nodo de dado
-    el.text.textContent = node.text || 'Lanzando dado...';
+    el.text.innerHTML = textToHTML(node.text || 'Lanzando dado...');
     showDiceRoll(node, node.dice || 'd6');
     el.nextBtn.disabled = true;
   } 
   else if(nodeType === 'coin'){
     // Nodo de moneda
-    el.text.textContent = node.text || 'Lanzando moneda...';
+    el.text.innerHTML = textToHTML(node.text || 'Lanzando moneda...');
     showCoinFlip(node);
     el.nextBtn.disabled = true;
   }
   else if(nodeType === 'input'){
     // Nodo de entrada de texto
-    el.text.textContent = node.text || 'Escribe tu respuesta:';
+    el.text.innerHTML = textToHTML(node.text || 'Escribe tu respuesta:');
     showTextInput(node);
     el.nextBtn.disabled = true;
   }
@@ -223,12 +319,13 @@ function renderNode(id){
         typeText(el.text, node.text, speed, null, characterId, { suppressVoice });
       }
     }
-    else el.text.textContent = '';
+    else el.text.innerHTML = '';
     
     // Mostrar choices si existen
     if(Array.isArray(node.choices) && node.choices.length){
       el.nextBtn.disabled = true;
-      node.choices.forEach((c, idx) => {
+      const availableChoices = getAvailableChoices(node);
+      availableChoices.forEach((c, idx) => {
         const btn = document.createElement('button');
         btn.textContent = c.text || `Opción ${idx+1}`;
         btn.addEventListener('click', (e)=>{ e.stopPropagation(); historyStack.push(id); goTo(c.next); });
@@ -253,12 +350,13 @@ function renderNode(id){
         typeText(el.text, node.text, 18, null, characterId, { suppressVoice });
       }
     }
-    else el.text.textContent = '';
+    else el.text.innerHTML = '';
 
     // choices
     if(Array.isArray(node.choices) && node.choices.length){
       el.nextBtn.disabled = true;
-      node.choices.forEach((c, idx) => {
+      const availableChoices = getAvailableChoices(node);
+      availableChoices.forEach((c, idx) => {
         const btn = document.createElement('button');
         btn.textContent = c.text || `Opción ${idx+1}`;
         // stop propagation so the parent .click handler (which does skip/next) doesn't interfere
@@ -508,6 +606,9 @@ function startGame(){
   wireAudioControls();
   // start background music with fade-in (user gesture has occurred)
   try{ fadeInMusic(900); }catch(e){}
+  // Load route unlocks
+  loadRouteUnlocks();
+  updateRouteDBtnVisibility();
   // si el script no está preparado (rare), arranca el ejemplo; si está preparado, comienza en start
   if(!script){ loadScript(sampleScript); return; }
   // check for saved resume point

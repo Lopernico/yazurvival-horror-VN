@@ -25,6 +25,12 @@ const characters = {
      open: 'assets/yazu bocona.png',
     closed: 'assets/yazu cerrada.png',
     voice: 'assets/talking.mp3'
+  },
+  'Sistema': {
+    // Sistema es un narrador, usa un sprite neutro (sin mostrar sprite)
+    open: '',
+    closed: '',
+    voice: 'assets/talking.mp3'
   }
   // Agregar más personajes aquí: 
   // 'NombrePersonaje': { open: 'ruta/abierto.png', closed: 'ruta/cerrado.png', voice: 'ruta/sonido.mp3' }
