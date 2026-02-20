@@ -3602,7 +3602,8 @@
   "id": "chapter3_routeB_escape_end",
   "type": "dialog",
       "background": "assets/Patio.jpg",
-  "text": "FIN — RUTA B\n\nMorir libre."
+  "text": "FIN — RUTA B\n\nMorir libre.",
+  "next": null
 },
 {
   "id": "chapter3_routeD_control_1",
@@ -3955,3 +3956,4 @@
 
     ]
 }
+
